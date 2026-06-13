@@ -2,6 +2,12 @@
 
 La historia evolutiva del proceso. Cada cambio al flow vive aquí.
 
+## v0.3.0 — 2026-06-13
+- **Routing** (`rules/routing.md`) + skill cargadora `route-task`.
+- Tabla output→rama→ejecutor para las 8 ramas; frontera Código (casi todo → Claude Code);
+  routing automático con declaración en una línea; multi-rama = manda el output final.
+- Razón: la columna vertebral. Elimina el "¿Cowork o Code?" como decisión por tarea.
+
 ## v0.2.0 — 2026-06-13
 - Rituales de sesión: **retrieve** (`rules/session-open.md`) y **capture** (`rules/session-close.md`),
   cada uno con su skill cargadora.
