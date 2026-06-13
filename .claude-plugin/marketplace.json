@@ -1,0 +1,17 @@
+{
+  "name": "claude-system",
+  "owner": {
+    "name": "Andrés Ferrero"
+  },
+  "metadata": {
+    "description": "Sistema de trabajo personal: proceso (no contenido) instalable en Cowork y Claude Code.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "claude-system-core",
+      "source": "./plugins/core",
+      "description": "El proceso genérico: backbone, contrato de reporte, rituales, routing. Sin nada específico de ningún proyecto."
+    }
+  ]
+}
