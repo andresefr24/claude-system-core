@@ -2,6 +2,19 @@
 
 La historia evolutiva del proceso. Cada cambio al flow vive aquí.
 
+## v0.5.0 — 2026-06-13
+- **Retro** (`rules/retro.md`) + skill cargadora `retro`. Core de proceso completo.
+- Tres capas: síntomas (métricas del friction-log), enfermedades (causa raíz obligatoria),
+  auto-auditoría (¿los fixes pasados movieron su métrica?). Tope de 3 propuestas. Propone, Andrés dispone.
+- Añadido `meta/skill-candidates.md` con `capture-audit` y el hook `SessionStart` registrados.
+- Razón: institucionaliza la lucha contra el "enfoque en síntomas".
+
+## v0.4.0 — 2026-06-13
+- **Ingesta** (`rules/ingest.md`) + skill cargadora `ingest`.
+- Gate compartido con capture (preview → aprobación → aterriza); destila al esquema + conserva
+  crudo; dos niveles de confianza (`validated` flag); en conflicto gana lo validado-a-fondo.
+- Razón: conecta el sistema con el mundo exterior sin contaminar el vault.
+
 ## v0.3.0 — 2026-06-13
 - **Routing** (`rules/routing.md`) + skill cargadora `route-task`.
 - Tabla output→rama→ejecutor para las 8 ramas; frontera Código (casi todo → Claude Code);

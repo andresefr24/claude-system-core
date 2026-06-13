@@ -10,8 +10,8 @@ El plugin de proceso. Genérico, sin nada específico de ningún proyecto.
 | Retrieve (apertura) | regla + skill cargadora | ✅ v0.2.0 |
 | Capture (cierre) | regla + skill cargadora | ✅ v0.2.0 |
 | Routing | regla + skill cargadora | ✅ v0.3.0 |
-| Ingesta | skill | ⏳ pendiente |
-| Retro | skill + scheduled task | ⏳ pendiente |
+| Ingesta | regla + skill cargadora | ✅ v0.4.0 |
+| Retro | regla + skill cargadora | ✅ v0.5.0 |
 
 Los requisitos completos de cada componente están en el documento de requisitos
 (fuera del repo, en las notas de diseño).
