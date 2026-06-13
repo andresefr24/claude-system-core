@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "Sistema de trabajo personal: proceso (no contenido) instalable en Cowork y Claude Code.",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {

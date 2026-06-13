@@ -7,8 +7,8 @@ El plugin de proceso. Genérico, sin nada específico de ningún proyecto.
 | Componente | Tipo | Estado |
 |---|---|---|
 | Contrato de reporte | regla + skill cargadora | ✅ v0.1.0 |
-| Retrieve (apertura) | ritual | ⏳ pendiente |
-| Capture (cierre) | ritual | ⏳ pendiente |
+| Retrieve (apertura) | regla + skill cargadora | ✅ v0.2.0 |
+| Capture (cierre) | regla + skill cargadora | ✅ v0.2.0 |
 | Routing | skill | ⏳ pendiente |
 | Ingesta | skill | ⏳ pendiente |
 | Retro | skill + scheduled task | ⏳ pendiente |

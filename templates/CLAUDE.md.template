@@ -10,21 +10,21 @@ El contenido (decisiones, gotchas, normativos, estado) vive en:
 
 ## Reglas siempre activas
 
+Las reglas canónicas viven en el plugin `claude-system-core` (`rules/`). Resumen operativo:
+
 **Nunca de memoria.** Antes de producir cualquier deliverable, lee el archivo normativo
 relevante del vault ({ej. brand-identity.md, SCHEMA.md}). Si existe un normativo, se lee.
 
-**Apertura (retrieve).** Al empezar una tarea, roza estos cuatro siempre:
-`active-context.md`, normativos relevantes, decisiones recientes, gotchas del área.
-La profundidad es proporcional a la rama/riesgo: código y datos = lectura completa;
-docs y research = ligera. Si falta el contexto que la tarea necesita, AVISA y PREGUNTA
-antes de seguir.
+**Apertura (retrieve).** Ver `rules/session-open.md`. Al empezar una tarea, roza siempre
+`active-context.md`, normativos, decisiones recientes y gotchas; profundidad proporcional a
+la rama. Si falta el contexto que la tarea necesita, AVISA y PREGUNTA antes de seguir.
 
-**Reporte.** Toda entrega sigue el contrato de reporte:
+**Reporte.** Ver `rules/report-contract.md`. Toda entrega:
 TL;DR → "Necesito que decidas" → cuerpo conceptual → "Confianza y huecos".
 
-**Cierre (capture).** Al terminar, propón los deltas durables para el vault
-(decisiones, gotchas, cambio de estado, hilos abiertos) y espera aprobación antes
-de escribir. Anota fricción del proceso en el friction-log del repo del sistema.
+**Cierre (capture).** Ver `rules/session-close.md`. Al terminar, propón los deltas durables
+para el vault y espera aprobación antes de escribir. Mejora del proceso → friction-log del
+repo del sistema; mejora del proyecto → vault.
 
 ## Frontera de herramienta
 
