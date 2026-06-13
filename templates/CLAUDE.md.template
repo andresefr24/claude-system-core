@@ -1,0 +1,32 @@
+# CLAUDE.md — {NOMBRE_DEL_PROYECTO}
+
+Este repo opera bajo el sistema de trabajo personal (plugin `claude-system-core`).
+Copia este archivo a la raíz del repo y rellena {LOS_PLACEHOLDERS}.
+
+## Vault de este proyecto
+
+El contenido (decisiones, gotchas, normativos, estado) vive en:
+`{RUTA_AL_VAULT}`  (ej. ../tcgvault-knowledge/ o ../tech-knowledge/)
+
+## Reglas siempre activas
+
+**Nunca de memoria.** Antes de producir cualquier deliverable, lee el archivo normativo
+relevante del vault ({ej. brand-identity.md, SCHEMA.md}). Si existe un normativo, se lee.
+
+**Apertura (retrieve).** Al empezar una tarea, roza estos cuatro siempre:
+`active-context.md`, normativos relevantes, decisiones recientes, gotchas del área.
+La profundidad es proporcional a la rama/riesgo: código y datos = lectura completa;
+docs y research = ligera. Si falta el contexto que la tarea necesita, AVISA y PREGUNTA
+antes de seguir.
+
+**Reporte.** Toda entrega sigue el contrato de reporte:
+TL;DR → "Necesito que decidas" → cuerpo conceptual → "Confianza y huecos".
+
+**Cierre (capture).** Al terminar, propón los deltas durables para el vault
+(decisiones, gotchas, cambio de estado, hilos abiertos) y espera aprobación antes
+de escribir. Anota fricción del proceso en el friction-log del repo del sistema.
+
+## Frontera de herramienta
+
+Este repo es código: el trabajo serio (tests, migraciones, git, refactors) se hace aquí
+en Claude Code. Lo que no produce un commit no pertenece a este repo.
