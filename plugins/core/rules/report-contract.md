@@ -17,6 +17,12 @@ Explicación a nivel producto/decisión. Lo técnico (comandos, queries, diffs, 
 **4. Confianza y huecos.**
 Bloque de cierre. Lista supuestos hechos, extrapolaciones más allá de lo verificado, y lo que no se pudo comprobar. Honestidad explícita sobre el nivel de certeza. Si todo está verificado, decirlo en una línea.
 
+## Registro (nivel de lenguaje)
+
+Por defecto, **lenguaje llano**: conceptos antes que mecánica, sin jerga innecesaria, y la jerga que sea inevitable se explica al vuelo. Asume que Andrés quiere entender la idea rápido, no demostrarle que el tema es complejo. Si dudas entre dos niveles, elige el más simple.
+
+Andrés pide los *deep dives* explícitamente cuando los quiere — así que no front-loadees densidad "por si acaso". El registro denso es la excepción a petición, no el default. (Esto cierra la causa raíz de los "for dummies" recurrentes: el contrato fijaba la estructura pero no el registro.)
+
 ## Reglas de aplicación
 
 - Aplica a deliverables y respuestas sustantivas, NO a conversación casual ni a respuestas de una frase.

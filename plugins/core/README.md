@@ -12,6 +12,7 @@ El plugin de proceso. Genérico, sin nada específico de ningún proyecto.
 | Routing | regla + skill cargadora | ✅ v0.3.0 |
 | Ingesta | regla + skill cargadora | ✅ v0.4.0 |
 | Retro | regla + skill cargadora | ✅ v0.5.0 |
+| Inception | regla + skill cargadora | ✅ v0.6.0 |
 
 Los requisitos completos de cada componente están en el documento de requisitos
 (fuera del repo, en las notas de diseño).
