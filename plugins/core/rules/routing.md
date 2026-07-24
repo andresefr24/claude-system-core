@@ -30,6 +30,13 @@ Casi todo el código va a **Claude Code**. Cowork no toca código salvo snippets
 - **Declara la decisión en UNA LÍNEA antes de ejecutar**: ej. "→ Code: toca el repo de MintStash" o "→ Datos: esto es una query a Supabase". La declaración hace que el override sea un reflejo, no una arqueología.
 - Si Andrés corrige la rama, se acata sin fricción.
 
+## Verificación de UI en navegador
+
+Al verificar UI en vivo (rama Browser), los límites del tooling son parte del resultado:
+
+- **Declara el viewport real alcanzado.** `resize_window` tiene mínimo real (~500px de ventana; la emulación móvil ha llegado a ~312px, no a 390). Una auditoría "móvil" que no alcanzó el viewport objetivo lo dice explícitamente; nunca se reporta como verificado un tamaño que no se montó.
+- **No asumas límites del tooling: reprodúcelos hoy antes de trabajar alrededor de ellos.** (Corrección 2026-07-25: Claude-in-Chrome sí entra a localhost, contra lo que el friction-log registró en junio.) Una regla o workaround sobre una limitación no verificada contra el estado presente de la herramienta nace muerta.
+
 ## Tareas multi-rama
 
 Cuando una tarea atraviesa varias ramas (ej.: investigar datos → escribir un doc), manda la rama del **output final**. Las demás son sub-pasos invisibles que se resuelven solos, sin checkpoints intermedios.

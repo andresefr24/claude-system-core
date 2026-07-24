@@ -2,6 +2,18 @@
 
 La historia evolutiva del proceso. Cada cambio al flow vive aquí.
 
+## v0.9.0 — 2026-07-25
+- **Verificación de UI en navegador** codificada en `rules/routing.md`: declarar siempre el viewport
+  real alcanzado (resize_window ~500px; emulación ~312px, no 390) y verificar limitaciones de tooling
+  contra el estado presente antes de proponer workarounds. Razón: viewport cap ×2 en cohort 07-10;
+  la parte "nunca localhost" quedó fuera (rechazada 07-07, premisa falsa).
+- **Capture incremental de fricción + log único** en `rules/session-close.md`: la fricción de proceso
+  se anota en el momento (sin gate de aprobación — el gate protege el vault, no el log) y el cierre solo
+  consolida; destino único `claude-system-core/meta/friction-log.md`, los vaults de proyecto no tienen
+  friction-log propio. Razón: idealista 07-08 murió sin OK y su fricción se perdió; cohort 07-10 no
+  loggeó; apareció un log paralelo en `tech-knowledge/meta/`.
+- Retro 2026-07-25 registrada en `pending-decisions.md` (3 propuestas: 1 ya resuelta por v0.8.0, 2 aprobadas).
+
 ## v0.8.0 — 2026-07-25
 - **Loop retro→decisión cerrado**: nuevo `meta/pending-decisions.md` (buzón de propuestas con decisión
   registrada), wiring en `rules/retro.md` (la retro deposita ahí — único write permitido a la corrida

@@ -1,6 +1,6 @@
 {
   "name": "claude-system-core",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Proceso de trabajo: contrato de reporte, rituales de sesión, routing, comms y retro. Genérico y portable entre proyectos.",
   "author": {
     "name": "Andrés Ferrero"

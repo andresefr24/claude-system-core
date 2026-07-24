@@ -20,9 +20,11 @@ Al cerrar, PROPÓN los deltas como una lista breve y espera aprobación de Andr�
 
 Entra solo lo **durable y load-bearing**: lo que será cierto mañana y que algo o alguien necesitará leer. Lo efímero no entra. (La retro semanal hace el barrido periódico; la aprobación de Andrés es el gate de entrada.)
 
-## Registro de fricción
+## Registro de fricción — incremental, un solo log
 
-Si durante la sesión hubo un retry, una re-explicación, un override de routing o un hueco de contexto, anótalo en `meta/friction-log.md` del repo del sistema, una línea por evento. La retro lo leerá para buscar enfermedades, no solo síntomas.
+La fricción de PROCESO (retry, re-explicación, override de routing, hueco de contexto) se anota **en el momento en que ocurre**, una línea en `meta/friction-log.md` del repo del sistema, sin ceremonia y sin esperar aprobación: el gate de capture protege el vault del proyecto, no este log. El cierre solo consolida y revisa lo ya anotado — si la sesión pivota o muere sin cierre ordenado, la evidencia ya está en el log (enfermedad vista en idealista 07-08 y cohort 07-10: el capture acoplado al cierre se tragaba la fricción).
+
+**Destino único:** la fricción de proceso vive SOLO en `claude-system-core/meta/friction-log.md`. Los vaults de proyecto no tienen friction-log propio; la deuda técnica y las ideas del proyecto sí van a su vault. La retro lee un único log para buscar enfermedades, no solo síntomas.
 
 ## Candidata a skill (no construir aún)
 
