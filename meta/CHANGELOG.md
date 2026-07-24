@@ -2,6 +2,18 @@
 
 La historia evolutiva del proceso. Cada cambio al flow vive aquí.
 
+## v0.10.0 — 2026-07-25
+- **Design gate** en `rules/routing.md`: toda tarea que crea o muta estructura (modelo de datos,
+  tabla/vista/flag, read path, contrato público) expone primero 2-3 opciones con tradeoffs —o el
+  modelo más simple posible— e invita la intención arquitectónica de Andrés antes de codificar.
+  Razón: retro 2026-07-17 — oracle-price se construyó como migración one-way de 3992 filas y se
+  rehizo como flag que era la intención de Andrés desde el inicio (friction-log 16-jul).
+- Retro 2026-07-17 registrada en `pending-decisions.md`: propuesta 1 (write de la retro) ya
+  resuelta por v0.8.0; propuesta 2 (remote mintstash) aprobada con resolución raíz fuera del
+  plugin (Andrés autentica el remote); propuesta 3 → esta versión.
+- Scheduled task `retro-semanal-sistema` alineada con v0.8.0: su prompt prohibía todo write;
+  ahora permite el único write autorizado (`meta/pending-decisions.md` + `meta/retro-YYYY-MM-DD.md`).
+
 ## v0.9.0 — 2026-07-25
 - **Verificación de UI en navegador** codificada en `rules/routing.md`: declarar siempre el viewport
   real alcanzado (resize_window ~500px; emulación ~312px, no 390) y verificar limitaciones de tooling

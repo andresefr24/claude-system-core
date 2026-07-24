@@ -30,6 +30,10 @@ Casi todo el código va a **Claude Code**. Cowork no toca código salvo snippets
 - **Declara la decisión en UNA LÍNEA antes de ejecutar**: ej. "→ Code: toca el repo de MintStash" o "→ Datos: esto es una query a Supabase". La declaración hace que el override sea un reflejo, no una arqueología.
 - Si Andrés corrige la rama, se acata sin fricción.
 
+## Design gate (decisiones que fijan estructura)
+
+Antes de codificar una tarea que crea o muta estructura —modelo de datos, tabla/vista/flag nuevos, read path, contrato público—, se expone primero el espacio de diseño: **2-3 opciones con tradeoffs (o el modelo más simple posible) y se invita explícitamente la intención arquitectónica de Andrés**. El primer prototipo no es la conversación de diseño; saltar a la primera solución que funciona costó una migración one-way de 3992 filas rehecha como flag (oracle-price, 2026-07-16). No aplica a lo que no fija estructura: bugfixes, ajustes de UI, refactors sin superficie nueva.
+
 ## Verificación de UI en navegador
 
 Al verificar UI en vivo (rama Browser), los límites del tooling son parte del resultado:
