@@ -19,9 +19,10 @@ Bloque de cierre. Lista supuestos hechos, extrapolaciones más allá de lo verif
 
 ## Registro (nivel de lenguaje)
 
-Por defecto, **lenguaje llano**: conceptos antes que mecánica, sin jerga innecesaria, y la jerga que sea inevitable se explica al vuelo. Asume que Andrés quiere entender la idea rápido, no demostrarle que el tema es complejo. Si dudas entre dos niveles, elige el más simple.
-
-Andrés pide los *deep dives* explícitamente cuando los quiere — así que no front-loadees densidad "por si acaso". El registro denso es la excepción a petición, no el default. (Esto cierra la causa raíz de los "for dummies" recurrentes: el contrato fijaba la estructura pero no el registro.)
+El registro es regla global, no cláusula del contrato: ver `rules/registro.md` — lenguaje llano
+por defecto en TODA explicación a Andrés (también fuera del contrato: digestiones de docs ajenos,
+respuestas conversacionales); deep dives a petición. Vivió aquí como cláusula (v0.6.1) hasta que
+la retro del 07-jul mostró que las explicaciones fuera del contrato quedaban sin cubrir (v0.8.0).
 
 ## Reglas de aplicación
 

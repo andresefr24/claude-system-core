@@ -2,6 +2,20 @@
 
 La historia evolutiva del proceso. Cada cambio al flow vive aquí.
 
+## v0.8.0 — 2026-07-25
+- **Loop retro→decisión cerrado**: nuevo `meta/pending-decisions.md` (buzón de propuestas con decisión
+  registrada), wiring en `rules/retro.md` (la retro deposita ahí — único write permitido a la corrida
+  automática — y re-lista pendientes al abrir) y en `rules/session-open.md` (aviso de una línea si hay
+  pendientes >1 semana). Razón: retro 07-jul — dos propuestas maduras pasaron 11+ días en limbo porque
+  el flujo terminaba en el reporte; una retro automática sin canal de decisión degenera en informe que nadie lee.
+- **Registro llano promovido a regla global** (`rules/registro.md`): cubre toda explicación a Andrés,
+  incluidas digestiones de material ajeno denso — no solo deliverables bajo contrato. El contrato
+  conserva un puntero. Razón: doble "for dummies" post-v0.6.1 en digestión de doc externo — hueco de
+  alcance de la cláusula, no fix fallido.
+- Propuesta 3 de la retro 07-jul ("UI local → deploy a preview") **rechazada**: premisa invalidada por
+  Andrés (Claude-in-Chrome sí accede a localhost). Corrección anotada en el friction-log.
+- `marketplace.json` re-sincronizado a la versión del plugin (estaba en 0.6.1).
+
 ## v0.7.0 — 2026-07-25
 - **Primer tier determinista de enforcement**: hook `SessionStart` (`hooks/vault-freshness.sh` + `hooks/hooks.json`).
   Corre siempre al abrir sesión, localiza el vault en disco e inyecta su verdad de tierra (HEAD, ficheros clave

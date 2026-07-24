@@ -25,6 +25,9 @@ la rama. Si falta el contexto que la tarea necesita, AVISA y PREGUNTA antes de s
 **Reporte.** Ver `rules/report-contract.md`. Toda entrega:
 TL;DR → "Necesito que decidas" → cuerpo conceptual → "Confianza y huecos".
 
+**Registro.** Ver `rules/registro.md`. Lenguaje llano por defecto en toda explicación
+(también digestiones de docs ajenos y respuestas ad-hoc); deep dives solo a petición.
+
 **Cierre (capture).** Ver `rules/session-close.md`. Al terminar, propón los deltas durables
 para el vault y espera aprobación antes de escribir. Mejora del proceso → friction-log del
 repo del sistema; mejora del proyecto → vault.

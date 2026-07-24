@@ -28,6 +28,23 @@ La retro también hace el barrido periódico del vault que el capture deja pendi
 
 Puede correr como subagente (lee friction-log + transcripciones, contexto pesado) y devolver solo las 3 propuestas, sin ensuciar la conversación principal. Idealmente disparada por una scheduled task semanal (ver nota de setup en el README del repo).
 
+## El loop de decisión
+
+La retro no termina al entregar el reporte: termina cuando Andrés decide. Mecanismo:
+
+1. Toda retro **deposita sus propuestas** como filas `pendiente` en `meta/pending-decisions.md`.
+   Es el ÚNICO archivo que una corrida automática puede escribir — reglas y vault siguen
+   intocables sin OK.
+2. La retro siguiente **abre re-listando las pendientes** sin decidir, antes del diagnóstico
+   nuevo. Las propuestas no mueren en silencio: o se deciden, o se re-presentan.
+3. Cada decisión queda registrada en su fila: aprobada → versión del CHANGELOG; rechazada →
+   razón en una línea (tan valiosa como una aprobada: evita re-proponerla).
+
+Razón (retro 07-jul-2026): la retro corría automática y sus propuestas quedaban en limbo —
+dos propuestas maduras pasaron 11+ días sin decisión mientras su evidencia seguía creciendo.
+
 ## Destino de las propuestas aprobadas
 
-Lo aprobado se edita en el plugin, sube de versión, y se anota en `meta/CHANGELOG.md`. Las ideas que aún no cruzan el umbral van a `meta/skill-candidates.md`.
+Lo aprobado se edita en el plugin, sube de versión, se anota en `meta/CHANGELOG.md` y se cierra
+su fila en `meta/pending-decisions.md`. Las ideas que aún no cruzan el umbral van a
+`meta/skill-candidates.md`.

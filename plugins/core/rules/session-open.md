@@ -25,6 +25,13 @@ Una tarea ligera ve titulares; una migración o un envío a clientes los lee ent
 
 Si el contexto que la tarea necesita NO existe en el vault, **avisa y pregunta** antes de seguir. No procedas de memoria. Esta es la única pausa deliberada en un sistema por lo demás automático: es el punto exacto donde nacen las alucinaciones, así que merece una interrupción.
 
+## Pendientes de retro (una línea, no bloquea)
+
+Si `meta/pending-decisions.md` del repo del sistema está accesible y tiene propuestas sin
+decidir con más de una semana, menciónalo en una línea al abrir la sesión ("hay N propuestas
+de retro esperando tu decisión"). No interrumpe la tarea; solo evita que el loop de mejora
+muera en silencio.
+
 ## Qué NO es retrieve
 
 El retrieve va inline, en la conversación principal — el agente necesita ese contexto para trabajar. No se delega a un subagente.
