@@ -1,9 +1,10 @@
 {
   "name": "claude-system-core",
-  "version": "0.6.1",
-  "description": "Proceso de trabajo: contrato de reporte, rituales de sesión, routing y retro. Genérico y portable entre proyectos.",
+  "version": "0.7.0",
+  "description": "Proceso de trabajo: contrato de reporte, rituales de sesión, routing, comms y retro. Genérico y portable entre proyectos.",
   "author": {
     "name": "Andrés Ferrero"
   },
-  "keywords": ["workflow", "process", "vault", "report-contract"]
+  "keywords": ["workflow", "process", "vault", "report-contract"],
+  "hooks": "./hooks/hooks.json"
 }

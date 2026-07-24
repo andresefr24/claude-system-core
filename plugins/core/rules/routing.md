@@ -15,6 +15,7 @@ La pregunta es una sola: **¿qué output produce esta tarea?** El output determi
 | Conocimiento de fuentes externas | Web | Cowork (research) |
 | Una acción en un servicio web o verificación en vivo | Browser | Cowork + Claude in Chrome |
 | Un documento, página de Notion, deck | Docs | Cowork |
+| Un mensaje a humanos (email, Slack, copy, respuesta a creador) | Docs → aplica `comms.md` | Cowork |
 | Un prototipo o visual | Diseño | Claude Design / Figma (Cowork prepara el brief) |
 | Un PRD, requerimiento o prompt | Specs & prompts | Cowork |
 | Memoria que entra al vault (handoff, agente ajeno, doc) | Ingesta | Cowork + skills de captura |

@@ -2,6 +2,21 @@
 
 La historia evolutiva del proceso. Cada cambio al flow vive aquí.
 
+## v0.7.0 — 2026-07-25
+- **Primer tier determinista de enforcement**: hook `SessionStart` (`hooks/vault-freshness.sh` + `hooks/hooks.json`).
+  Corre siempre al abrir sesión, localiza el vault en disco e inyecta su verdad de tierra (HEAD, ficheros clave
+  con marca de FALTA, identidad esperada del proyecto) más los guards de conector y de snapshot desfasado.
+  Razón: la enfermedad dominante de la retro (semana 19–26 jun) fue "el vault canónico no es lo que se consume"
+  (`miss-vault ×4`, incl. snapshot desfasado sin people.md y Gmail apuntando a landbot.io). No es dilución de
+  prosa —el modelo NO puede detectar staleness/identidad leyendo—, así que la prosa nunca lo arreglaría: exige
+  un tier determinista. Distinto del hook general de enforcement, que sigue APARCADO (ver skill-candidates).
+- **Regla de comms** (`rules/comms.md`) + wiring en `routing.md` (fila Docs → mensajes a humanos).
+  Audiencia + registro + canal como inputs de primera clase antes de redactar; registro venezolano al equipo,
+  español llano hacia fuera; enforcement real = persistir correcciones en `working-preferences.md`.
+  Razón: cruzó la regla de tres (Security app, Cohort, Influencer en una semana). Es regla dentro de Docs, no rama nueva.
+- Caveat de runtime registrado: los hooks `SessionStart` son feature de Claude Code; su disparo en Cowork no está
+  garantizado. El aviso de "vault vacío" de `session-open.md` sigue siendo el respaldo advisory donde el hook no corra.
+
 ## v0.6.1 — 2026-06-24
 - Cláusula de **registro** añadida al contrato de reporte: por defecto lenguaje llano (conceptos
   antes que mecánica, sin jerga gratuita); los deep dives se piden explícitamente.
