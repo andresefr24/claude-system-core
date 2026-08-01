@@ -2,6 +2,31 @@
 
 La historia evolutiva del proceso. Cada cambio al flow vive aquí.
 
+## v0.12.0 — 2026-08-01
+- **Frontera de escrituras en repos montados** en `rules/routing.md`: las escrituras y git sobre un
+  repo real montado van por Claude Code / Mac; el sandbox de Cowork queda para lecturas y para lo que
+  no toca la infra del repo. Razón: fricción del mount ×3 (locks de git 07-25, `rm` de archivos 07-25,
+  `.claude/` protegido + huérfano al construir `anomaly-debug` 08-01) → cruzó la regla de tres. No es
+  imposible desde Cowork (bash crea + `allow_cowork_file_delete` borra), pero es semi-seguro y frágil.
+
+## v0.11.0 — 2026-08-01
+- **Regla base `verify-source`** (`rules/verify-source.md`, siempre activa) + wiring en
+  `CLAUDE.md.template`: no afirmar un diagnóstico o dato con fuente accesible (BD, logs, código,
+  estado de deploy, normativo) sin verificarlo antes; toda explicación de un síntoma es una hipótesis
+  hasta confirmarla. Extiende el "nunca de memoria" (que solo cubría leer el normativo del vault) a
+  diagnósticos y hechos. Razón: retro 2026-08-01 — la enfermedad "explicar de memoria en vez de
+  verificar" (friction-log 16, 17-jul; 2/3) es un hueco de comportamiento BASE; Andrés eligió atacarla
+  en su tier siempre-activo en vez de confiar en un skill *triggered* que no dispara justo cuando el
+  modelo no reconoce que debe verificar. La regla es genérica y portable: describe el helper de forma
+  abstracta ("un proyecto puede proveer un skill-procedimiento para el caso reconocido"); los helpers
+  concretos (p. ej. el trust-debugging de mintstash) son instancias que viven en cada proyecto, no
+  dependencias de la regla — nada de este plugin nombra un artefacto de un proyecto concreto.
+- Retro 2026-08-01 registrada en `pending-decisions.md`: auditoría de la ráfaga v0.7.0–v0.10.0
+  ejecutada (sin regresiones; caveats de hook SessionStart y cadencia del loop → watch); hueco de
+  capture fuera de mintstash aprobado como watch; skill-candidates de mintstash decididos (#1 prompt-writing
+  promote con venue CC-side por revisar, #2 visual audit demote, #3 trust-debugging promote reencuadrado
+  como esta regla + helper).
+
 ## v0.10.0 — 2026-07-25
 - **Design gate** en `rules/routing.md`: toda tarea que crea o muta estructura (modelo de datos,
   tabla/vista/flag, read path, contrato público) expone primero 2-3 opciones con tradeoffs —o el

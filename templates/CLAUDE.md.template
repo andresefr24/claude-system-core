@@ -15,6 +15,10 @@ Las reglas canónicas viven en el plugin `claude-system-core` (`rules/`). Resume
 **Nunca de memoria.** Antes de producir cualquier deliverable, lee el archivo normativo
 relevante del vault ({ej. brand-identity.md, SCHEMA.md}). Si existe un normativo, se lee.
 
+**Verificar contra la fuente.** Ver `rules/verify-source.md`. No afirmes un diagnóstico o dato
+que tenga fuente accesible (BD, logs, código, estado de deploy) sin verificarlo antes. Toda
+explicación de un síntoma es una hipótesis hasta confirmarla contra su fuente.
+
 **Routing.** Ver `rules/routing.md`. Al empezar una tarea, enruta por el tipo de output y
 declara la rama en una línea. Cualquier cambio en un repo real → Claude Code.
 

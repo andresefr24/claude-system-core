@@ -24,6 +24,10 @@ La pregunta es una sola: **¿qué output produce esta tarea?** El output determi
 
 Casi todo el código va a **Claude Code**. Cowork no toca código salvo snippets de ejemplo en una explicación. Cualquier cambio en un repo real —por trivial que parezca— se enruta a Code, porque allí el toolchain (tests, linter, git, hooks) fuerza la calidad. Lo que no produce un commit no es rama Código.
 
+### Escrituras y git en repos montados desde el sandbox de Cowork
+
+**Las escrituras y las operaciones git sobre un repo real montado van por Claude Code / Mac, no por el sandbox de Cowork.** El sandbox queda para lecturas (leer el código, grepear, entender) y para escribir donde no toca la infraestructura del repo. Razón (fricción ×3, 2026-07-25 y 2026-08-01): el mount de Cowork es **crear-pero-no-borrar** (`rm` falla con "Operation not permitted" sin permiso explícito) y el Write tool **protege `.claude/`**; git desde el sandbox deja lockfiles huérfanos y puede firmar con la identidad equivocada. No es imposible —bash crea archivos y `allow_cowork_file_delete` desbloquea el borrado— pero es semi-seguro y frágil, y un error no se deshace fácil. Si un build hay que hacerlo desde Cowork, hazlo consciente del límite; por defecto, ese trabajo es de Code.
+
 ## Autonomía: automático con override
 
 - Enruta y arranca solo. No pide permiso.
