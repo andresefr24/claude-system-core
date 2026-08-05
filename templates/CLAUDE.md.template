@@ -12,12 +12,25 @@ El contenido (decisiones, gotchas, normativos, estado) vive en:
 
 Las reglas canónicas viven en el plugin `claude-system-core` (`rules/`). Resumen operativo:
 
+**Patrón antes que reparación.** Un defecto casi nunca es la unidad del problema; la unidad es el
+mecanismo que lo produjo. Antes de arreglar, **busca la segunda instancia**: una es un incidente,
+dos es un mecanismo, y entonces se arregla el mecanismo. Pregunta dónde más vive esa *forma* de
+error, no ese error. Desconfía de las curas que son un documento nuevo, mover algo de sitio, o
+arreglar las N encontradas sin preguntar qué impedirá la N+1. Ver `rules/patterns.md`.
+
+**Una regla existe si se carga.** Solo hay tres vías: inline en este fichero, un hook, o un gate
+con fixtures. Un fichero de reglas sin ninguna de las tres es prosa. Al escribir una regla nueva,
+la pregunta no es dónde ponerla sino cuál de las tres la va a cargar.
+
 **Nunca de memoria.** Antes de producir cualquier deliverable, lee el archivo normativo
 relevante del vault ({ej. brand-identity.md, SCHEMA.md}). Si existe un normativo, se lee.
 
 **Verificar contra la fuente.** Ver `rules/verify-source.md`. No afirmes un diagnóstico o dato
 que tenga fuente accesible (BD, logs, código, estado de deploy) sin verificarlo antes. Toda
 explicación de un síntoma es una hipótesis hasta confirmarla contra su fuente.
+
+**Comms.** Ver `rules/comms.md`. Cuando el output es un mensaje a un humano que no es Andrés,
+audiencia + registro + canal son inputs obligatorios ANTES de redactar, no correcciones después.
 
 **Routing.** Ver `rules/routing.md`. Al empezar una tarea, enruta por el tipo de output y
 declara la rama en una línea. Cualquier cambio en un repo real → Claude Code.
