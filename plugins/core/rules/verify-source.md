@@ -31,6 +31,12 @@ explicación que "cierra el caso" es precisamente la señal de alarma.
    omite filas en silencio y falsea el resultado.
 3. **Al reportar una métrica, declara contra qué universo se mide** (tabla de mercado vs contenido
    de la app, etc.); una cobertura sin universo nombrado engaña.
+4. **Una comprobación parcial no es una comprobación.** Al verificar, nombra **qué superficie
+   miraste** y si podría haber otra: un fichero no es el repo, una tabla no es el esquema, la BD no
+   es el código, un grep no es una lectura. Dos casos obligatorios:
+   - **Antes de borrar o renombrar algo con id**, la superficie incluye un `grep` del repo por ese
+     id. Un renombrado lo caza el compilador; un id borrado no lo caza nadie, porque es una cadena.
+   - **Antes de describir para qué sirve un fichero**, ábrelo. Un nombre no es su contenido.
 
 ## Procedimiento asociado (helper opcional, por proyecto)
 
@@ -43,6 +49,8 @@ reconoce que está ante una anomalía — que es justo cuando la explicación de
 skill del proyecto acelera el caso reconocido; la regla cubre el resto.
 
 ## Razón
+
+**Ampliada el 2026-08-05** con el punto 4, tras tres fallos del mismo tipo en una sola sesión con la regla ya activa: describir un fichero por su nombre sin abrirlo, borrar una fila de la BD sin grepear el repo por su id, y concluir que no existían tokens tras mirar un solo fichero. Los tres tenían la fuente a un Read o un grep de distancia, y los tres los cazó Andrés preguntando, no un gate. Detalle en el friction-log.
 
 Retro 2026-08-01 + friction-log 16 y 17-jul-2026: dos incidentes de afirmar datos y diagnósticos de
 memoria teniendo la fuente accesible (los datos en la BD, el estado real en el código) — uno cifró
