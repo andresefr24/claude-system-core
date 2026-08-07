@@ -10,6 +10,13 @@ El contenido (decisiones, gotchas, normativos, estado) vive en:
 
 ## Reglas siempre activas
 
+**Canario del plugin (primera comprobación, antes de todo).** Si las skills `claude-system-core:*`
+NO aparecen entre las disponibles de esta sesión, el plugin del sistema no cargó — todas las reglas
+de abajo están apagadas aunque el listado de plugins diga otra cosa. Dilo en la primera respuesta y
+no asumas ninguna regla como activa hasta resolverlo (`claude plugin list`, buscar "Hook load
+failed", reinstalar/reiniciar). Este canario vive AQUÍ y no en el plugin a propósito: nada dentro
+del plugin puede avisar de que el plugin no cargó (incidente v0.14.1, 2026-08-07).
+
 Las reglas canónicas viven en el plugin `claude-system-core` (`rules/`). Resumen operativo:
 
 **Patrón antes que reparación.** Un defecto casi nunca es la unidad del problema; la unidad es el

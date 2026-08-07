@@ -2,6 +2,37 @@
 
 La historia evolutiva del proceso. Cada cambio al flow vive aquí.
 
+## v0.14.2 — 2026-08-07 (tarde)
+- **Canario de carga en `CLAUDE.md.template`**: primera comprobación de sesión, independiente del
+  plugin — si las skills `claude-system-core:*` no aparecen, el plugin no cargó y se dice antes de
+  continuar. Es el único mecanismo que sobrevive a un fallo total de carga: nada DENTRO del plugin
+  puede avisar de que el plugin no cargó (v0.14.1 lo demostró: el hook vigilante estaba dentro del
+  incendio). El CLAUDE.md de cada repo carga por su cuenta.
+- **Paso de verificación de carga en README § Cómo se actualiza**: tras reiniciar, comprobar no solo
+  la versión listada sino que el plugin CARGÓ (sin "Hook load failed", skills visibles).
+
+## v0.14.1 — 2026-08-07 (tarde, hotfix de CC)
+- **El manifiesto ya no declara `hooks/hooks.json`** (commit `c8e50e3`, hecho en la sesión de CC):
+  el cargador nuevo de Claude Code rechaza referenciar el fichero estándar (se auto-carga) y el
+  rechazo tumbaba EL PLUGIN ENTERO — contrato, rituales, routing y ambos hooks, sin ningún aviso
+  más allá de un "Hook load failed" que nadie mira. La clave venía inofensiva desde v0.7.0; lo que
+  cambió fue el cargador. Incidente: desde el reinicio post-update hasta el hotfix, cero reglas
+  activas. Detalle en friction-log 08-07.
+
+## Cambios de proceso del mismo bloque (van en v0.14.2)
+- **La entrega como parte del release**: README § "Cómo se actualiza" (paso a paso canónico
+  verificado en la sesión de CC) + cláusula en `rules/retro.md` — al subir versión se sincroniza
+  `marketplace.json` y se entrega el paso a paso; **un fix no instalado cuenta como no shipeado**
+  (su ventana de medición empieza al instalarse). Razón: Andrés corrió v0.10.0 durante toda la
+  ráfaga v0.11–v0.14 — tres versiones de reglas que ninguna sesión llegó a cargar; misma enfermedad
+  que v0.13.0 (lo que se carga ≠ lo que se escribe), un tramo más arriba. Addendum de corrección
+  en `retro-2026-08-07.md`.
+- **`/insights` como auditor externo de la retro**: carpeta `meta/insights/` (primer informe, el
+  del 08-05, ya guardado), sección nueva en `rules/retro.md` y cruce cableado en la scheduled task.
+  Razón: el informe llegó independientemente al mismo diagnóstico que la retro (premature
+  completion); dos diagnósticos que convergen se validan mutuamente.
+- `marketplace.json` re-sincronizado (iba por 0.12.0; 2ª deriva — la 1ª fue v0.8.0).
+
 ## v0.14.0 — 2026-08-07
 - **Eje de capacidad en `rules/verify-source.md`** (punto 5 de la disciplina): antes de afirmar un
   número o diagnóstico, decir qué NO habría podido detectar el instrumento. Tres formas: una pasada

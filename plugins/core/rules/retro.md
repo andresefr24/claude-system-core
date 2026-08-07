@@ -43,8 +43,23 @@ La retro no termina al entregar el reporte: termina cuando Andrés decide. Mecan
 Razón (retro 07-jul-2026): la retro corría automática y sus propuestas quedaban en limbo —
 dos propuestas maduras pasaron 11+ días sin decisión mientras su evidencia seguía creciendo.
 
+## Auditor externo: /insights
+
+Si hay un informe de `/insights` (Claude Code) en `meta/insights/` que ninguna retro cruzó aún,
+crúzalo: es un diagnóstico independiente sobre las mismas sesiones. Convergencia valida el
+diagnóstico propio; divergencia señala lo que uno de los dos no ve. Si el informe más reciente
+tiene >30 días, recordar a Andrés en una línea que toca correr `/insights` y dejar el HTML en
+`meta/insights/`.
+
 ## Destino de las propuestas aprobadas
 
 Lo aprobado se edita en el plugin, sube de versión, se anota en `meta/CHANGELOG.md` y se cierra
 su fila en `meta/pending-decisions.md`. Las ideas que aún no cruzan el umbral van a
 `meta/skill-candidates.md`.
+
+**La entrega es parte del cambio, no un después** (aprendido con v0.10.0→v0.14.0: tres versiones de
+reglas que ninguna sesión llegó a cargar porque Andrés seguía en 0.10.0). Al subir versión:
+(a) `marketplace.json` se sincroniza a la misma versión que `plugin.json`, y (b) el mensaje de
+cierre incluye el paso a paso de update (README, § Cómo se actualiza). En la auto-auditoría, un fix
+que Andrés no instaló cuenta como NO shipeado — su ventana de medición empieza al instalarse, no
+al escribirse.
