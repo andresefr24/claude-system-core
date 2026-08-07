@@ -17,6 +17,14 @@ Explicación a nivel producto/decisión. Lo técnico (comandos, queries, diffs, 
 **4. Confianza y huecos.**
 Bloque de cierre. Lista supuestos hechos, extrapolaciones más allá de lo verificado, y lo que no se pudo comprobar. Honestidad explícita sobre el nivel de certeza. Si todo está verificado, decirlo en una línea.
 
+## Superficie nombrada (v0.14.0)
+
+Toda afirmación **load-bearing** —la que sostiene una decisión, un borrado, un veredicto de "funciona/está roto"— nombra en el propio texto **qué superficie se consultó** para verificarla: el fichero abierto, la query corrida, el estado vivo comprobado. No es un apéndice de citas: es una cláusula en la frase ("verificado abriendo X", "medido con Y, N muestras").
+
+El porqué: los fallos de verificación en prosa no tienen gate posible — ningún grep ve una afirmación. Nombrar la superficie hace la omisión **visible a ojo**: si una afirmación importante llega sin su superficie, Andrés puede preguntar "¿y esto de dónde sale?" sin tener que sospechar primero. Acotada a lo load-bearing: exigirla en cada frase engordaría los reportes hasta lo insufrible.
+
+Razón (retro 2026-08-07, encargo de Andrés 08-05): tres afirmaciones falsas en una sesión, las tres cazadas por Andrés preguntando; complementa el punto 5 de `verify-source` — aquel corrige el juicio antes de afirmar, esta cláusula hace visible cuándo no se ejerció.
+
 ## Registro (nivel de lenguaje)
 
 El registro es regla global, no cláusula del contrato: ver `rules/registro.md` — lenguaje llano

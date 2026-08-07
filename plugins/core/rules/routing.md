@@ -44,6 +44,7 @@ Al verificar UI en vivo (rama Browser), los límites del tooling son parte del r
 
 - **Declara el viewport real alcanzado.** `resize_window` tiene mínimo real (~500px de ventana; la emulación móvil ha llegado a ~312px, no a 390). Una auditoría "móvil" que no alcanzó el viewport objetivo lo dice explícitamente; nunca se reporta como verificado un tamaño que no se montó.
 - **No asumas límites del tooling: reprodúcelos hoy antes de trabajar alrededor de ellos.** (Corrección 2026-07-25: Claude-in-Chrome sí entra a localhost, contra lo que el friction-log registró en junio.) Una regla o workaround sobre una limitación no verificada contra el estado presente de la herramienta nace muerta.
+- **Setup antes de mirar (v0.14.0).** La verificación empieza cuando el entorno está confirmado, no antes: (1) si hay dev server, matar el viejo y arrancar desde la raíz del repo, confirmando que la URL responde; (2) fijar el viewport objetivo y **confirmarlo en el DOM**, no asumir que el resize aplicó; (3) solo entonces mirar/screenshot. Si hace falta móvil, es una pasada separada y etiquetada, no la misma ventana reusada. Razón (insights 2026-08-05): fricción recurrente en 148 llamadas de browser — puerto ocupado por un server viejo, cwd equivocado, y un viewport a 375px enseñando la barra móvil cuando se auditaba el sidebar de desktop.
 
 ## Tareas multi-rama
 

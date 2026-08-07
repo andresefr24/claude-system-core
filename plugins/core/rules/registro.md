@@ -13,6 +13,19 @@ a la primera leída, sin releer frases?
 Los *deep dives* se piden explícitamente. No front-loadear densidad "por si acaso": el registro
 denso es la excepción a petición, no el default.
 
+## Densidad de ámbitos (v0.14.0)
+
+El registro no es solo el nivel de lenguaje: es también **cuántos hilos abre cada frase**.
+
+- **Una idea por frase.** Si la frase necesita un paréntesis Y una subordinada Y un ejemplo, son dos frases o tres.
+- **Lo enumerable va en bullets**, no trenzado en prosa. Tres decisiones, cuatro causas, cinco pasos: lista.
+- **No abrir un ámbito nuevo dentro de una subordinada.** Cada contexto nuevo (otro proyecto, otra regla, otra fecha) merece su propia frase o su propio bullet.
+
+Razón (retro 2026-08-07): doble "for dummies" en una conversación con esta regla activa. Diagnóstico
+de Andrés, literal: "tu descripción abre muchos ámbitos en cada frase; bullet points ayudarían". La
+regla cubría jerga y nivel, no densidad — regla correcta con el dominio recortado, misma forma que
+verify-source esa semana.
+
 ## Material ajeno denso
 
 Al digerir un documento externo (estrategia, paper, spec ajena), la densidad de la fuente **no

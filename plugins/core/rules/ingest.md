@@ -20,6 +20,13 @@ Hacer las dos cosas:
 - **Destilar** el material a los tipos del esquema del vault (decisiones, gotchas, etc.), siguiendo `SCHEMA.md`.
 - **Conservar el crudo** como referencia, por si hay que volver al original.
 
+## Scrub de datos sensibles
+
+Igual que en capture (ver `session-close.md`): último paso antes de escribir, barrer nombres de
+clientes reales, credenciales, URLs internas y datos identificantes; genericizar u omitir. En
+ingesta aplica **también al crudo que se conserva**: si el original trae datos sensibles, el crudo
+se guarda redactado y se anota que se redactó.
+
 ## Dos niveles de confianza
 
 - **preview-aprobado** (ligero): pasó el vistazo de Andrés al resumen. Entra utilizable pero marcado `validated: false`.

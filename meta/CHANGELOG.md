@@ -2,6 +2,47 @@
 
 La historia evolutiva del proceso. Cada cambio al flow vive aquí.
 
+## v0.14.0 — 2026-08-07
+- **Eje de capacidad en `rules/verify-source.md`** (punto 5 de la disciplina): antes de afirmar un
+  número o diagnóstico, decir qué NO habría podido detectar el instrumento. Tres formas: una pasada
+  no es una medida; verde solo dice lo que el check mira; si lo medido y lo observado se contradicen,
+  duda del instrumento primero. Razón: retro 2026-08-07 — 5 fallos en una sesión (06-08) con la regla
+  cargada; sus ejemplos eran todos de cobertura, ninguno de capacidad.
+- **Cláusula de superficie nombrada en `rules/report-contract.md`**: toda afirmación load-bearing
+  nombra en el texto qué superficie se consultó para verificarla, haciendo la omisión visible a ojo.
+  Acotada a lo load-bearing. Razón: encargo de Andrés (08-05) — 3 afirmaciones falsas cazadas solo
+  por él preguntando; las afirmaciones en prosa no tienen gate posible, solo visibilidad.
+- **Cláusula de densidad de ámbitos en `rules/registro.md`**: una idea por frase; lo enumerable en
+  bullets; no abrir un ámbito nuevo dentro de una subordinada. Razón: doble "for dummies" en la propia
+  conversación de la retro con la regla activa — regulaba nivel de lenguaje pero no densidad. Diagnóstico
+  de Andrés; materializada en pausa explícita de revisión (1ª aparición, sin esperar regla de tres).
+- **Sugerir el cierre por producción, no por longitud** en `rules/session-close.md`: toda sugerencia
+  de cortar la sesión se corrobora contra la producción real (commits, deliverables) y nombra su
+  superficie; la longitud de la conversación no es evidencia. Razón: petición directa de Andrés
+  (08-07); aplica el punto 5 de `verify-source` al propio estado de la sesión.
+- **Scrub de datos sensibles** como último paso de capture (`session-close.md`) e ingesta
+  (`ingest.md`, incluido el crudo conservado): nombres de clientes, credenciales, URLs internas y
+  datos identificantes se genericizan u omiten antes de escribir al vault. Razón: insights 08-05 —
+  nombres de clientes reales aterrizaron en una entrada de KB pese a instrucción explícita.
+- **Setup antes de mirar** en la verificación de UI (`routing.md`): server limpio arrancado desde la
+  raíz, viewport fijado y confirmado en el DOM, y solo entonces screenshot; móvil es pasada separada.
+  Razón: insights 08-05 — fricción recurrente en 148 llamadas de browser (puerto ocupado, cwd
+  equivocado, viewport a 375px auditando desktop).
+- Propuesta 3 de la retro (mapa proyecto→vault en session-close/open) aprobada como **WATCH**:
+  1ª aparición (daily AE 08-06), se materializa en 2ª. Registrada en `pending-decisions.md`.
+- Backfill: entrada v0.13.0 escrita a posteriori (subió versión el 06-08 sin anotarse aquí;
+  detectado por la retro 2026-08-07).
+
+## v0.13.0 — 2026-08-06 *(entrada escrita el 08-07; la versión subió sin anotarse)*
+- **Regla de patrones** (`rules/patterns.md`): antes de reparar, buscar la segunda instancia — una es
+  un incidente, dos es un mecanismo. Inline en el template y en el CLAUDE.md de MintStash. Razón:
+  friction-log 08-06 — 3 horas reorganizando docs de diseño sin cuestionar si el documento era el
+  mecanismo; la capacidad de ver el patrón existía pero nada la invocaba.
+- **Hook `rules-have-loaders.sh`** (SessionStart, callado si todo va bien): comprueba que cada fichero
+  de `rules/` tenga vía de carga (skill, hook o inline) y que el CLAUDE.md desplegado lleve los bullets
+  que el template declara. Con prueba negativa. Razón: `verify-source` llevaba 3 semanas en el template
+  sin aterrizar en el CLAUDE.md de MintStash — el template no es lo que se carga; faltaba la entrega.
+
 ## v0.12.0 — 2026-08-01
 - **Frontera de escrituras en repos montados** en `rules/routing.md`: las escrituras y git sobre un
   repo real montado van por Claude Code / Mac; el sandbox de Cowork queda para lecturas y para lo que
