@@ -2,14 +2,27 @@
 
 Regla siempre activa. Antes de ejecutar una tarea, trae del vault el contexto que necesita. El objetivo es que ninguna sesión arranque en frío y que nunca se produzca "de memoria".
 
-## Lectura base (siempre los cuatro)
+## Lectura base (siempre las cuatro CATEGORÍAS)
 
-Al empezar cualquier tarea, roza SIEMPRE estos cuatro del vault del proyecto:
+Al empezar cualquier tarea, roza SIEMPRE estas cuatro preguntas al vault del proyecto. Son
+categorías, no nombres de fichero — cada vault puede implementarlas donde quiera:
 
-1. `active-context.md` — estado actual: en qué se trabaja, qué quedó abierto.
-2. Normativos relevantes a la tarea (brand-identity, SCHEMA, etc.).
-3. Decisiones recientes (`decisions.md`) — para no contradecir lo ya resuelto.
-4. Gotchas del área que se va a tocar (`gotchas.md`).
+1. **Estado vigente** — en qué se trabaja, qué quedó abierto. Default: `active-context.md`.
+2. **Normativos** relevantes a la tarea (brand-identity, SCHEMA, etc.).
+3. **Decisiones recientes** — para no contradecir lo ya resuelto. Puede vivir en `decisions.md`,
+   en ficheros `decision-*.md` fechados, o en el bloque de decisiones del estado vigente.
+4. **Gotchas del área** que se va a tocar. Puede vivir en `gotchas.md`, o promovido dentro de
+   `working-preferences.md` / `tech-debt.md`.
+
+**El mapeo categoría→fichero lo declara el vault, una vez, en su `CONVENTIONS.md`** (el mapa es
+proyecto→ESQUEMA, no solo proyecto→carpeta). Si el vault no lo declara: se deduce, se deja el
+mapeo deducido escrito en el reporte de apertura —para que quede rastro de si se acertó—, y al
+cerrar se propone fijarlo en `CONVENTIONS.md` para no deducirlo dos veces.
+
+Razón (retro 2026-08-14; apariciones 08-06 y 08-10): un rito que nombra la implementación obliga
+a cada vault a tener el layout del rito, o al agente a improvisar el mapeo en cada apertura sin
+dejar rastro. El vault de mintstash eligió otra implementación a propósito y mordió por los dos
+extremos en una misma sesión (apertura y cierre).
 
 ## Profundidad proporcional a la rama
 

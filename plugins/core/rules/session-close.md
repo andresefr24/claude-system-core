@@ -4,10 +4,13 @@ Regla siempre activa. Al terminar una sesión o tarea, lo durable va al vault pa
 
 ## Qué se captura
 
-- **Decisiones tomadas** → `decisions.md` (para no re-litigar ni contradecir).
-- **Gotchas descubiertos** → `gotchas.md` (trampas y cómo se resolvieron).
-- **Cambio de estado** → actualizar `active-context.md` (qué avanzó, qué quedó abierto).
-- **Hilos abiertos** → en `active-context.md` (lo que hay que retomar — el reemplazo del handoff).
+- **Decisiones tomadas** → categoría decisiones (default `decisions.md`; el destino real lo
+  declara el `CONVENTIONS.md` del vault — ver el mapeo del ritual de apertura, v0.15.0).
+- **Gotchas descubiertos** → categoría gotchas (default `gotchas.md`; ídem).
+- **Cambio de estado** → actualizar el estado vigente (default `active-context.md`).
+- **Hilos abiertos** → en el estado vigente (lo que hay que retomar — el reemplazo del handoff).
+  Nombrar el caso y su consecuencia, no enumerar pendientes: «un usuario con colección, que es el
+  que cambia el plan» disparó; «faltan casos por probar» no habría disparado (visto 08-11).
 - **Oportunidades de mejora**, según de qué sean:
   - del **proceso** (el flow falló, esto se podría automatizar) → `meta/friction-log.md` del repo del sistema (`claude-system`).
   - del **proyecto** (deuda técnica, ideas) → vault del proyecto.
@@ -15,6 +18,18 @@ Regla siempre activa. Al terminar una sesión o tarea, lo durable va al vault pa
 ## Control: proponer, no escribir
 
 Al cerrar, PROPÓN los deltas como una lista breve y espera aprobación de Andrés antes de tocar el vault. La aprobación es la auditoría humana en la entrada. No escribas nada al vault sin el OK.
+
+## Grep antes de proponer (v0.15.0)
+
+Antes de proponer un delta, **grepear el vault por su idea** (dos o tres términos, no leer el
+fichero entero). Si hay acierto, el delta no es "añadir" sino "afilar lo que ya está" — que
+además suele ser mejor entrada. El gate humano no protege contra duplicados: Andrés aprueba una
+descripción de una línea y no puede saber si ya existe; solo el grep lo sabe. Un duplicado
+envenena el retrieval — grep devuelve las dos copias con el mismo peso.
+
+Razón (2026-08-10): un delta aprobado resultó estar escrito en `working-preferences` §Tools desde
+el 18-05. El capture proponía contra la memoria de la sesión, no contra el vault — "no lo he
+visto" se convertía en "no está".
 
 ## Scrub de datos sensibles (v0.14.0)
 

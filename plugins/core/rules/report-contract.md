@@ -17,6 +17,26 @@ Explicación a nivel producto/decisión. Lo técnico (comandos, queries, diffs, 
 **4. Confianza y huecos.**
 Bloque de cierre. Lista supuestos hechos, extrapolaciones más allá de lo verificado, y lo que no se pudo comprobar. Honestidad explícita sobre el nivel de certeza. Si todo está verificado, decirlo en una línea.
 
+## El tope estructural (v0.15.0): el reporte por defecto ES la versión corta
+
+El contrato fija el orden; esto fija el **tamaño**. Por defecto, el reporte es esto y nada más:
+
+- **Veredicto en una línea** — literal, una línea; sin matices dentro.
+- **"Necesito que decidas", numerado.**
+- **Confianza y huecos**, en bullets.
+- **El recorrido NO va.** Cómo se llegó, qué se intentó, qué se descartó, las autocorrecciones:
+  disponible bajo demanda, no por defecto. El cuerpo conceptual existe para lo que Andrés
+  necesita entender PARA DECIDIR, no para registrar lo hecho.
+
+Disciplina de escritura: **la versión de cinco líneas se escribe primero** y se expande solo si
+se pide. Nunca escribir la larga y confiar en resumirla — ese es exactamente el gradiente que
+falla.
+
+Razón (retro 2026-08-14, reabre el fix de densidad v0.14.0): 5 "for dummies" en 3 días
+consecutivos con la cláusula de densidad cargada. La densidad crece con el trabajo verificado
+acumulado — el reporte degenera en registro de lo hecho. Una preferencia de estilo no puede
+contra ese gradiente; un límite estructural que no depende del juicio en el momento, sí.
+
 ## Superficie nombrada (v0.14.0)
 
 Toda afirmación **load-bearing** —la que sostiene una decisión, un borrado, un veredicto de "funciona/está roto"— nombra en el propio texto **qué superficie se consultó** para verificarla: el fichero abierto, la query corrida, el estado vivo comprobado. No es un apéndice de citas: es una cláusula en la frase ("verificado abriendo X", "medido con Y, N muestras").

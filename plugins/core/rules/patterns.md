@@ -67,6 +67,30 @@ Un fichero de reglas sin ninguna de las tres es prosa. Al escribir una regla nue
 no es dónde ponerla: es **cuál de las tres vías la va a cargar**. Si no hay respuesta, no se ha
 escrito una regla.
 
+## La escalera de enforcement (v0.15.0)
+
+Estar cargada no basta. La semana del 08-08 lo midió: `npx vitest` se tecleó con la prohibición
+leída veinte minutos antes; una mejora se afirmó con la regla normativa citada ese mismo día; el
+registro llano falló tres días seguidos con su cláusula activa. El fallo no era el loader — era
+el **disparador**: la prosa pide reconocer el momento de aplicarse, y ese reconocimiento es justo
+lo que falla bajo carga o cuando el resultado conviene (razonamiento motivado, no olvido).
+
+> **Una regla violada dos veces estando cargada no se re-escribe como más prosa: sube de vía.**
+
+La subida tiene dos formas, y las dos sustituyen reconocimiento por mecánica:
+
+- **Sustituto concreto:** no "nunca X" sino "para <esta intención>, teclea Y". «Nunca `npx
+  vitest`» falló tres veces; «para correr un fichero: `npm test -- <fichero>`» funcionó a la
+  primera.
+- **Gate determinista** en la frontera de la acción (hook, pre-push, check de arranque). El gate
+  de versión de Node cazó una violación real en su primera hora de vida.
+
+Corolarios: una tercera anotación descriptiva de la misma violación no aporta diagnóstico — a la
+segunda, la entrada del friction-log propone el sustituto o el gate, y la retro lo encola como
+build. Y todo build encolado **se revalida contra el árbol al abordarse**: un TODO redactado
+sobre evidencia de hace días puede estar ya curado, o quedarse corto (visto 08-11: de tres TODOs
+encolados, uno estaba casi curado y otro tenía cifras cinco veces cortas).
+
 ## Por qué esta regla existe
 
 2026-08-06, MintStash. Andrés: *"si no te hablo de enfermedad vs síntoma, la gran mayoría del

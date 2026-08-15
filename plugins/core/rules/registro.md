@@ -26,6 +26,12 @@ de Andrés, literal: "tu descripción abre muchos ámbitos en cada frase; bullet
 regla cubría jerga y nivel, no densidad — regla correcta con el dominio recortado, misma forma que
 verify-source esa semana.
 
+**El tamaño del reporte no lo gobierna esta regla sino el tope estructural del contrato
+(v0.15.0):** la versión corta es el default y el recorrido va bajo demanda. Esta cláusula regula
+la forma de las frases que sí se escriben; el tope decide cuántas se escriben. Razón: la cláusula
+sola falló su métrica (5 "for dummies" en 3 días, retro 2026-08-14) porque la densidad crece con
+el trabajo acumulado detrás — eso lo frena un límite, no un estilo.
+
 ## Material ajeno denso
 
 Al digerir un documento externo (estrategia, paper, spec ajena), la densidad de la fuente **no

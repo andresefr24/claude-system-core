@@ -2,6 +2,39 @@
 
 La historia evolutiva del proceso. Cada cambio al flow vive aquí.
 
+## v0.15.0 — 2026-08-14
+
+- **Escalera de enforcement en `rules/patterns.md`**: una regla violada dos veces estando CARGADA
+  no se re-escribe como más prosa — sube de vía (sustituto concreto "para <intención>, teclea Y",
+  o gate determinista en la frontera de la acción). A la segunda violación, la entrada del
+  friction-log propone el mecanismo y la retro lo encola; los builds encolados se revalidan contra
+  el árbol al abordarse. Razón: retro 2026-08-14 — el fallo ya no es el loader sino el disparador;
+  toda regla que falló la semana estaba cargada y leída ("«Nunca X» falló tres veces; «para este
+  caso, teclea Y» funcionó a la primera").
+- **Tope estructural en `rules/report-contract.md`** (+ puntero en `registro.md`): el reporte por
+  defecto ES la versión corta — veredicto en una línea, "necesito que decidas" numerado, huecos; el
+  recorrido solo bajo demanda; la versión de cinco líneas se escribe PRIMERO. Razón: el fix de
+  densidad de v0.14.0 FALLÓ su métrica (5 "for dummies" en 3 días con la cláusula cargada) — la
+  densidad crece con el trabajo acumulado y eso lo frena un límite, no un estilo. Diagnóstico
+  reabierto y cerrado por otra vía.
+- **Rituales por CATEGORÍAS, no ficheros** (`session-open.md`, `session-close.md`): las cuatro
+  lecturas de apertura y los destinos de capture son categorías (estado vigente, normativos,
+  decisiones, gotchas); el mapeo categoría→fichero lo declara cada vault una vez en su
+  `CONVENTIONS.md` (proyecto→ESQUEMA, no solo proyecto→carpeta); sin declaración, se deduce y se
+  deja rastro. Materializa el WATCH de la retro 08-07 (2ª aparición 08-10, mordió en apertura y
+  cierre de la misma sesión).
+- **Grep antes de proponer** en `session-close.md`: todo delta se grepea contra el vault antes de
+  proponerse; el gate humano no protege contra duplicados, solo el grep. Razón: delta duplicado del
+  08-10 (ya estaba escrito desde el 18-05).
+- **Hilos abiertos con caso nombrado** en `session-close.md`: nombrar el caso y su consecuencia,
+  no enumerar pendientes (el aviso «un usuario con colección, que es el que cambia el plan» disparó;
+  «faltan casos por probar» no habría disparado — 08-11).
+- Encolados lado-CC (mintstash), pendientes de build con revalidación previa: (a) `node -v` vs
+  `.nvmrc` al arrancar rama código; (b) bloqueo mecánico de `npx vitest` → `npm test -- <fichero>`
+  (hook PreToolUse); (c) disciplina git-escritura (add antes de mutar; sin `2>/dev/null` en writes;
+  `git diff --cached --name-only` tras add con rutas).
+- Retro 2026-08-14 registrada; `marketplace.json` sincronizado a 0.15.0.
+
 ## v0.14.2 — 2026-08-07 (tarde)
 - **Canario de carga en `CLAUDE.md.template`**: primera comprobación de sesión, independiente del
   plugin — si las skills `claude-system-core:*` no aparecen, el plugin no cargó y se dice antes de
