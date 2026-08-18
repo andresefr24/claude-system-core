@@ -57,9 +57,12 @@ if git -C "$vault" rev-parse --git-dir >/dev/null 2>&1; then
   git_state="working-tree dirty=${dirty} · local ahead=${ahead} behind=${behind}"
 fi
 
-# inventario de ficheros clave (people.md fue el fallo real de la retro)
+# inventario de ficheros clave (people.md fue el fallo real de la retro; roadmap.md
+# entró el 2026-08-18, cuando llevaba 24 días afirmando como pendientes dos cosas
+# ya hechas y nadie lo abría al empezar — es la quinta categoría de session-open, y
+# aquí es donde deja de ser prosa)
 inv=""
-for f in active-context.md decisions.md gotchas.md people.md working-preferences.md feedback.md; do
+for f in active-context.md roadmap.md decisions.md gotchas.md people.md working-preferences.md feedback.md; do
   if [ -f "$vault/$f" ]; then inv="${inv}${f} "; else inv="${inv}${f}(FALTA) "; fi
 done
 

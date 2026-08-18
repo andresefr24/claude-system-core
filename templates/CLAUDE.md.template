@@ -42,9 +42,11 @@ audiencia + registro + canal son inputs obligatorios ANTES de redactar, no corre
 **Routing.** Ver `rules/routing.md`. Al empezar una tarea, enruta por el tipo de output y
 declara la rama en una línea. Cualquier cambio en un repo real → Claude Code.
 
-**Apertura (retrieve).** Ver `rules/session-open.md`. Al empezar una tarea, roza siempre
-`active-context.md`, normativos, decisiones recientes y gotchas; profundidad proporcional a
-la rama. Si falta el contexto que la tarea necesita, AVISA y PREGUNTA antes de seguir.
+**Apertura (retrieve).** Ver `rules/session-open.md`, que es donde viven las categorías y su
+número — no se repiten aquí, porque una lista copiada en el fichero que se carga primero gana por
+accidente sobre la regla que la amplía. Al empezar una tarea, roza todas con profundidad
+proporcional a la rama, y el **plan vigente** siempre aunque la rama sea ligera. Si falta el
+contexto que la tarea necesita, AVISA y PREGUNTA antes de seguir.
 
 **Reporte.** Ver `rules/report-contract.md`. Toda entrega:
 TL;DR → "Necesito que decidas" → cuerpo conceptual → "Confianza y huecos".
