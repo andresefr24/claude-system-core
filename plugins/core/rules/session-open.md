@@ -48,6 +48,28 @@ a cada vault a tener el layout del rito, o al agente a improvisar el mapeo en ca
 dejar rastro. El vault de mintstash eligió otra implementación a propósito y mordió por los dos
 extremos en una misma sesión (apertura y cierre).
 
+### El estado vigente tiene tope: 3 ítems y un log de deuda (añadida 2026-09-08)
+
+**El estado vigente es un doc con forma, no un cajón.** Su contenido son **como máximo 3 ítems**:
+las próximas cosas sobre las que se va a actuar. Todo lo demás que sea trabajo pendiente vive en el
+**log de deuda técnica**, que es un fichero aparte y sin tope. Nada más entra en el estado vigente.
+
+**Por qué un tope y no disciplina.** El estado vigente es el primer fichero que se lee cada sesión,
+así que su tamaño es coste de contexto directo en todas. Y sin tope crece por acumulación, porque
+añadir un pendiente es gratis y quitarlo requiere decidir. Medido en el vault de mintstash: 74 KB el
+2026-08-18, podado a 18 KB, y **66 KB otra vez el 2026-09-08**, con 16 pendientes en una sola
+sección. Tres semanas para volver al punto de partida.
+
+**El tope es del contenido, no de los bloques de narración.** Un gate que cuenta bloques de estado
+no ve esto: el vault de mintstash tenía uno y pasaba en verde con el fichero en 50 KB, porque lo que
+había engordado eran dos secciones que no son bloques. Si el vault implementa el tope con un
+control, que cuente **ítems**.
+
+**Y un gate de pre-push no vale para este fichero.** El estado vigente se escribe cada sesión y se
+empuja de vez en cuando: el mismo vault llevaba 29 commits sin empujar con el gate en rojo, o sea
+que la comprobación existía y no se había ejecutado nunca en esos 29. Si hay control, va antes: en
+el commit, o en el ritual de cierre.
+
 ## Profundidad proporcional a la rama
 
 "Siempre las cinco" significa rozarlas. Cuán profundo entrar lo decide la rama de routing:

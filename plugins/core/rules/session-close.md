@@ -11,6 +11,11 @@ Regla siempre activa. Al terminar una sesión o tarea, lo durable va al vault pa
 - **Hilos abiertos** → en el estado vigente (lo que hay que retomar — el reemplazo del handoff).
   Nombrar el caso y su consecuencia, no enumerar pendientes: «un usuario con colección, que es el
   que cambia el plan» disparó; «faltan casos por probar» no habría disparado (visto 08-11).
+- **El tope del estado vigente se respeta al escribir, y es el paso que decide.** El estado vigente
+  admite **3 ítems**, los de la próxima sesión (ver el ritual de apertura). Si el delta mete un
+  cuarto, **el cierre no lo añade: propone cuál de los cuatro sale**, y sale al log de deuda
+  técnica o al archivo, nunca al propio estado. Añadir es gratis y quitar exige decidir, así que si
+  el cierre no fuerza esa decisión no la fuerza nadie y el fichero crece hasta doler.
 - **Oportunidades de mejora**, según de qué sean:
   - del **proceso** (el flow falló, esto se podría automatizar) → `meta/friction-log.md` del repo del sistema (`claude-system`).
   - del **proyecto** (deuda técnica, ideas) → vault del proyecto.
@@ -67,6 +72,27 @@ cualquier otra (ver `verify-source`, punto 5: la longitud es una pasada, no una 
 
 Razón: petición directa de Andrés (2026-08-07) — las sugerencias de corte se apoyaban solo en la
 longitud de la sesión, que no mide nada; commits y artefactos son la fuente fiable de qué se hizo.
+
+## El cierre acaba en clear, y ése es el ciclo (v0.16.0, 2026-09-08)
+
+**Escribir al vault no cierra el ciclo: cerrarlo es vaciar el contexto.** Una vez escritos los
+deltas, el último paso del ritual es **dejar la conversación en cero**, para que la siguiente
+arranque del vault y no del arrastre de ésta.
+
+**Por qué el clear es la mitad que hace que el vault sirva.** Sin él el vault es un backup que nadie
+lee: la sesión siguiente arranca con el contexto de la anterior todavía puesto, así que el retrieve
+no aporta y el estado escrito no se estrena. Y hay un fallo peor que el coste de contexto: **en una
+conversación larga el modelo deriva hacia lo último que recibió feedback positivo** (el clásico «si
+todo ha ido bien, ¿te parece que haga esto?»), y ese desvío se convierte en el centro de atención.
+El ciclo abrir/cerrar re-ancla el foco cada sesión en vez de dejar que lo decida la conversación.
+Y cuando una conversación infinita se comprime, el modelo se queda con lo que quiere, medio al azar,
+que es la otra cara de lo mismo.
+
+**Quién lo ejecuta, dicho para no prometer lo que el agente no puede hacer.** El agente **no puede
+vaciar su propio contexto**. Lo que hace el ritual es cerrarlo explícitamente: confirmar que los
+deltas están escritos y **pedir el clear en la última línea**, nombrando en qué fichero quedó el
+estado para que la próxima apertura sepa por dónde entrar. Un cierre que escribe y sigue
+conversando no ha cerrado.
 
 ## Candidata a skill (no construir aún)
 
