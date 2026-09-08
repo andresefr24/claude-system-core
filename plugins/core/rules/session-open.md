@@ -70,6 +70,31 @@ empuja de vez en cuando: el mismo vault llevaba 29 commits sin empujar con el ga
 que la comprobación existía y no se había ejecutado nunca en esos 29. Si hay control, va antes: en
 el commit, o en el ritual de cierre.
 
+**EL TOPE NO VALE SOLO: hay que decir dónde sigue la cola** (añadido 2026-09-08, y esto corrige la
+versión que se escribió sin ello). Un tope que no nombra al cuarto ítem no ordena nada, **convierte
+un desorden visible en uno invisible**: lo que sale del estado vigente cae en el log de deuda, y un
+log de deuda no es una cola. Medido en el vault de mintstash el 2026-09-08: **173 fichas activas,
+141 sin prioridad**, y su propio índice avisa en mayúsculas de que no es un orden de trabajo.
+
+Así que el reparto es de tres sitios, no de dos, y cada uno contesta una pregunta distinta:
+
+| Pregunta | Dónde vive |
+|---|---|
+| ¿Qué estoy tocando ahora? | **Estado vigente**, con tope de 3 ítems |
+| ¿Qué va después? | **Plan vigente** (categoría 5 de arriba) |
+| ¿Qué hay apuntado para algún día? | **Log de deuda**, cada ficha con su disparador |
+
+**Y lo que sale de la cabeza sale con disparador, no con prioridad**, porque una prioridad se podre
+sin avisar y un disparador o se cumplió o no. Medido el mismo día, auditando las 15 fichas del vault
+de mintstash que declaraban prioridad: **cuatro estaban muertas o contestadas, dos necesitaban
+reencuadre y una era doce veces peor de lo que decía.** La más alta llevaba tres semanas siendo ALTA
+sobre una tabla que una migración había borrado. Casi la mitad de las prioridades declaradas
+mentían, y ninguna daba señal de estarlo.
+
+**Las dos puntas se declaran una a la otra.** El estado vigente dice que su cola está en el plan, y
+el plan dice que su cabeza está en el estado. Un puntero en un solo sentido se queda huérfano en
+silencio el día que alguien cambia el otro lado.
+
 ## Profundidad proporcional a la rama
 
 "Siempre las cinco" significa rozarlas. Cuán profundo entrar lo decide la rama de routing:
