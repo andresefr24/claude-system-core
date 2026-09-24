@@ -647,3 +647,11 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-09-24 | renumeré con números de línea leídos antes de insertar líneas más arriba | El script falló en la segunda ficha. No escribió nada porque el exit iba antes del guardado, pero con el orden invertido habría renombrado la ficha equivocada. Rehecho buscando por título y de abajo arriba.
 
 2026-09-24 | commiteé por fichero creyendo que aislaba mis cambios, y me llevé cuatro fichas de otra sesión | `git add <fichero>` añade todos los cambios de ese fichero. En ese mismo commit escribí que dejaba `active-context` fuera por tener trabajo ajeno: miré un fichero y no el otro. Ya está pusheado con dos commits encima, así que no se deshace. Regla al `CLAUDE.md` del repo.
+
+2026-09-24 | usé `git add -A` en el vault y me llevé el cambio de otra sesión dentro de mi commit | Era su verificación del coste del dominio, que acabó viajando con un mensaje que hablaba de referidos. **Es la mitad gemela de la entrada de arriba, del mismo día y en el mismo repo: una sesión barrió de más con `-A` y la otra con un fichero.** Dos caras del mismo problema, que no es el flag: es que dos sesiones escribían en el mismo checkout sin saberlo. Se arregló con un worktree, pero solo después de que doliera dos veces.
+
+2026-09-24 | busqué la cuenta de una creadora por su nombre artístico y afirmé que no tenía | Su correo es personal y no se parece a su nombre público, así que el cero era de mi instrumento y no del dato. Lo desmintió Andrés en un mensaje dándome el patrón del correo. La comprobación que faltaba es la de siempre: antes de dar por bueno un cero, preguntarse si la sonda podía encontrar lo que busca.
+
+2026-09-24 | dije que un gate era el instrumento defectuoso sin mirar los commits de mi propia rama | Su cuenta bajó de 187 a 185 y lo reporté como «una cifra que se mueve sin que se mueva su sujeto». El sujeto sí se movía: otra sesión había cerrado dos fichas muertas. La respuesta estaba a un `git log` de distancia y la busqué en el código del gate.
+
+2026-09-24 | usé `rg -rn` dos veces creyendo que `-r` era recursivo | En ripgrep `-r` es `--replace`, así que me devolvió texto mutilado: `data-freshness` salió como `n` y `internal_users` desapareció. La primera vez lo dejé pasar sin notarlo y monté medio diagnóstico encima.
