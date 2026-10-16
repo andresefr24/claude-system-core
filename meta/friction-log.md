@@ -755,3 +755,7 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-16 | retry por herramienta, MintStash | Metí un comando en una variable de zsh ($P) y zsh no la parte en palabras: los cinco envenenamientos de la 263 fallaron por el comando, no por la migración, y hubo que repetirlos.
 
 2026-10-16 | hueco de contexto en la apertura, MintStash | Diagnostiqué que refresh-oracle-prices.ts reescribía fichas sin condición sin mirar tech-debt: la TD-250 ya lo decía, con disparador «el mensual del 1 de octubre», cumplido sin que nadie lo viera. Salió al ir a numerar la TD-322. La apertura rozó active-context y migraciones, no las fichas del área tocada.
+
+2026-10-16 | retry por suposición de esquema, MintStash | Crucé `referrals` por `referred_user_id` sin mirar las columnas; la tabla usa `user_id` y la consulta falló. Un `information_schema.columns` antes de la primera consulta a una tabla poco usada lo habría evitado. Apuntado en la referencia del reel.
+
+2026-10-16 | silencio largo en la apertura, MintStash | El retrieve de una pregunta de datos (cuatro ficheros largos más TD-284/285) corrió sin una línea a Andrés y el harness tuvo que pedir estado tres veces. Decir qué se está haciendo antes de leer, no después.
