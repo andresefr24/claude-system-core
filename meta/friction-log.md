@@ -749,3 +749,9 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-14 | reimplementar la entrada del código real, MintStash (1) | Mi primer script de medida partió el CSV a mano con split(','): no vio los saltos de línea de Windows ni los nombres entre comillas, mandó 134 peticiones mal formadas a Scryfall y nos ganó su castigo. El lector de la app (Papa + rowsToParsedCsv) lo habría hecho bien.
 
 2026-10-14 | reimplementar la entrada del código real, MintStash (2) | En la segunda medida pasé la moneda como 'eur' cuando el dominio usa 'EUR'; el código real la trató como dólares y mis cifras esperadas del brief salieron 56 cartas desviadas. Misma forma que la (1): componer el camino real hasta la entrada, no solo la función de en medio.
+
+2026-10-16 | instrumento que no puede contestar, MintStash | Le pedí a Andrés que pegara los RAISE NOTICE de la guarda de la 263; el editor SQL de Supabase no los enseña, así que solo podía mandarme «Success». Medí yo después por MCP. Guardado como memoria.
+
+2026-10-16 | retry por herramienta, MintStash | Metí un comando en una variable de zsh ($P) y zsh no la parte en palabras: los cinco envenenamientos de la 263 fallaron por el comando, no por la migración, y hubo que repetirlos.
+
+2026-10-16 | hueco de contexto en la apertura, MintStash | Diagnostiqué que refresh-oracle-prices.ts reescribía fichas sin condición sin mirar tech-debt: la TD-250 ya lo decía, con disparador «el mensual del 1 de octubre», cumplido sin que nadie lo viera. Salió al ir a numerar la TD-322. La apertura rozó active-context y migraciones, no las fichas del área tocada.
