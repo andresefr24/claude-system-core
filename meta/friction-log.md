@@ -759,3 +759,19 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-16 | retry por suposición de esquema, MintStash | Crucé `referrals` por `referred_user_id` sin mirar las columnas; la tabla usa `user_id` y la consulta falló. Un `information_schema.columns` antes de la primera consulta a una tabla poco usada lo habría evitado. Apuntado en la referencia del reel.
 
 2026-10-16 | silencio largo en la apertura, MintStash | El retrieve de una pregunta de datos (cuatro ficheros largos más TD-284/285) corrió sin una línea a Andrés y el harness tuvo que pedir estado tres veces. Decir qué se está haciendo antes de leer, no después.
+
+2026-10-17 | hueco de contexto, MintStash | Para explicar el negocio a un tercero usé `business-model.md` sin contrastarlo con las specs de la Fase 2 y cité MTGStocks a ~4,99 $ (vigente: 4,25 $) y unos tiers que ya no existen. El doc no tenía banner de vencido; se le puso en el cierre. Un doc «strategic» viejo se contrasta con su spec antes de citar cifras.
+
+2026-10-17 | override por contenido no pedido, MintStash | En el brief para emprendedores metí la hipoteca, las preguntas al lector, el detalle técnico (Scryfall, elección de plataforma) y una frase personal sin que Andrés las pidiera; tuvo que filtrar ocho cosas a mano. Segunda vez del patrón de `proposals-go-in-chat-not-in-the-deliverable`: la regla estaba en memoria y no frenó, porque lo veía como contexto y no como propuesta. Memoria nueva más concreta: `third-party-material-filtered-against-the-ask`.
+
+2026-10-17 | silencio largo, MintStash (repetido) | El harness pidió estado cuatro veces en la sesión (retrieve inicial, doc-eval, maquetación, cierre). Mismo síntoma que el 16-10: el arreglo «decirlo antes de leer» no se aplicó. Es la enfermedad, no el síntoma: no hay nada que lo dispare.
+
+2026-10-17 | retry de herramientas, MintStash | Para revisar el PDF: Read no abre PDFs sin poppler, PIL no está, y `sips --cropOffset` recortó la página equivocada. Lo que funcionó: una captura de Chrome sin interfaz por página. Apuntado en `reference-como-se-saca-un-pdf-con-la-marca-2026-10-17`.
+
+2026-10-17 | decisión inventada, MintStash | Dije «al rechazar no sale ningún correo, como decidimos» sin que se hubiera decidido: lo único decidido era la pantalla del rechazo. Andrés tuvo que preguntar «¿por qué no queríamos?» para destaparlo. Memoria nueva: `cite-the-decision-or-dont-claim-it`.
+
+2026-10-17 | fallo que llegó a producción, MintStash | El enlace del correo de confirmación caía a la dirección del sitio porque la vuelta con parámetros no estaba en las Redirect URLs de Supabase. La pieza se había probado con `?mocks` y en el pane, nunca con un correo real antes de publicar; lo encontró Andrés al probar. Diagnóstico en `auth_logs` (la vuelta registrada en `/signup` y `/verify`).
+
+2026-10-17 | hueco de contexto, MintStash | Repetí varias turnos que la pieza 5 esperaba a la sesión de seguridad, y esa sesión llevaba archivada sin cambios desde el 16-10. No miré su estado hasta que hizo falta arrancar la pieza.
+
+2026-10-17 | prototipo sin medir, MintStash | Dos propuestas visuales se aplicaron distintas de lo enseñado: plegables de dos tercios a columna de 400 px (descuadre de 43 px al medir) y el correo de 560 a 732 px (una regla global de imagen pisaba el `max-width`). Avisado en los dos casos, pero el prototipo no se había hecho con las medidas reales.
