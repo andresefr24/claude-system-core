@@ -793,3 +793,10 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-19 | veneno en la capa equivocada, MintStash | Al envenenar el test de «las filas editadas quedan iguales», mis tres primeros venenos no podían ponerlo rojo: el script de artista ya no tiene forma de borrar, así que romperlo arriba no llegaba a las filas. Hizo falta envenenar la escritura de filas del doble. El veneno se elige por la capa donde vive el fallo, no por dónde está el código que cambié.
 
 2026-10-19 | sesiones cruzadas, MintStash | La sesión madre me pidió mezclar en main cuando ya estaba mezclado y empujado, y trajo «unas 80» filas de arte en las listas de Mei, que en la base son 60. Escribió sin mirar el estado de la rama ni medir la cifra.
+
+2026-10-19 | silencio largo, MintStash (recurrente, tercer día) | En la sesión de los correos el harness pidió estado unas diez veces, sobre todo mientras leía código y escribía la pieza común y el gate. Mismo síntoma que el 16-10 y el 17-10; el «decirlo antes de leer» del 16-10 sigue sin nada que lo dispare. Para la retro: es la enfermedad, no tres síntomas.
+
+2026-10-19 | retry por herramienta, MintStash (segunda vez) | Un bucle `for q in "TXT dominio" ...; dig +short $q` no partió la variable en palabras (zsh no lo hace) y devolvió vacío; estuve a punto de concluir que mintstash.app no tenía SPF ni DKIM. Es lo mismo del 16-10 con `$P`. Dos veces es mecanismo: en zsh, una variable con varias palabras va como array, con `${=q}`, o se escribe el comando entero.
+
+2026-10-19 | sonda que no distingue, MintStash | Propuse comprobar el despliegue de las funciones de creador con una llamada que la versión vieja contestaba igual (`notified: false`). Lo vi antes de usarla y leí el código desplegado con `get_edge_function`, pero la propuesta ya le había llegado a Andrés como comprobación. Memoria: `verify-deployed-edge-function-by-source`.
+
