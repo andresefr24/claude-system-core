@@ -775,3 +775,5 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-17 | hueco de contexto, MintStash | Repetí varias turnos que la pieza 5 esperaba a la sesión de seguridad, y esa sesión llevaba archivada sin cambios desde el 16-10. No miré su estado hasta que hizo falta arrancar la pieza.
 
 2026-10-17 | prototipo sin medir, MintStash | Dos propuestas visuales se aplicaron distintas de lo enseñado: plegables de dos tercios a columna de 400 px (descuadre de 43 px al medir) y el correo de 560 a 732 px (una regla global de imagen pisaba el `max-width`). Avisado en los dos casos, pero el prototipo no se había hecho con las medidas reales.
+
+2026-10-19 | normativo sin leer, MintStash | Propuse los colores de los correos (bajadas en `#ef4444`, «el rojo de bajada de la app») sin leer `docs/ui-rules.md`, que la regla «nunca de memoria» nombra como normativo. Su regla 20 dice que aquí una bajada es buena noticia y el radar la pinta en teal; Andrés lo validó en rojo y salió de casualidad al revisar las reglas `[H]` del release. Un correo también es interfaz: los normativos de interfaz se leen antes de proponer cómo se ve.
