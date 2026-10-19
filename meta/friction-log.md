@@ -787,3 +787,9 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-19 | copia que no contempla un caso, MintStash | «Todos los meses» en el resumen del 25% de los correos y en dos textos de la página `/creators`, con un plan anual decidido desde el 25-09. Lo cazó Andrés al leer el borrador. Copié la frase de la página sin preguntarme si valía para los dos planes.
 
 2026-10-19 | vault desfasado, MintStash | El registro de `people.md` no tenía nada entre el 24-09 y el 16-10, con nueve respuestas de creadores en ese tramo (una propuesta de vídeo, dos sin contestar por nosotros, un «no»). Y una nota decía que el mensaje del 24-09 a La Casa le contaba TD-287, cosa que la copia literal desmiente. Salió solo al pedir las conversaciones enteras.
+
+2026-10-19 | cifra sin clasificar, MintStash | La spec de «volver a pasar un script» contaba 6 cartas que faltaban en las listas de Mei, medidas por nombre sin mirar qué eran. Dos eran láminas de Art Series y salió solo en la simulación, después de que Andrés decidiera «correrlo con las 6»; la decisión se dio la vuelta un turno después. Medir cuántas no es medir qué son.
+
+2026-10-19 | veneno en la capa equivocada, MintStash | Al envenenar el test de «las filas editadas quedan iguales», mis tres primeros venenos no podían ponerlo rojo: el script de artista ya no tiene forma de borrar, así que romperlo arriba no llegaba a las filas. Hizo falta envenenar la escritura de filas del doble. El veneno se elige por la capa donde vive el fallo, no por dónde está el código que cambié.
+
+2026-10-19 | sesiones cruzadas, MintStash | La sesión madre me pidió mezclar en main cuando ya estaba mezclado y empujado, y trajo «unas 80» filas de arte en las listas de Mei, que en la base son 60. Escribió sin mirar el estado de la rama ni medir la cifra.
