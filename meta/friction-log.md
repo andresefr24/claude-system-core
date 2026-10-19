@@ -800,3 +800,7 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 
 2026-10-19 | sonda que no distingue, MintStash | Propuse comprobar el despliegue de las funciones de creador con una llamada que la versión vieja contestaba igual (`notified: false`). Lo vi antes de usarla y leí el código desplegado con `get_edge_function`, pero la propuesta ya le había llegado a Andrés como comprobación. Memoria: `verify-deployed-edge-function-by-source`.
 
+
+2026-10-19 | instrumento que no distingue, MintStash | Le di a Andrés «6 cartas nuevas» para las listas de artista de Mei comparando por `oracle_id`, y 2 eran láminas de Art Series (solo la ilustración, no cartas). No miré el `layout` de lo que contaba; lo cazó la sesión del script al construir el arreglo.
+
+2026-10-19 | dos sesiones en la misma carpeta, MintStash | Andrés pidió mezclar en `main` y no pude hacerlo desde aquí: la sesión del script, arrancada sin copia de trabajo propia, tenía cambios sin guardar en esa rama y en la misma carpeta, y el pre-push habría corrido la batería sobre ese árbol a medias. Hubo que pasarle la orden a ella. Una sesión que va a escribir código en un repo que otra sesión también toca va en su propia copia de trabajo.
