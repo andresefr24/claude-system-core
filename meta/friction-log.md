@@ -808,3 +808,5 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-19 | lectura parcial, MintStash | Le dije a Andrés que la función de prueba podía pisar precios en producción leyendo solo la línea del upsert, sin mirar quién la llamaba. Al leer lo desplegado entero, solo escribe cartas que no seguíamos, así que nunca pudo pisar.
 
 2026-10-19 | comando sin carpeta, MintStash | Le pasé `npm run deploy:trial` sin el `cd` al repo; lo lanzó desde `~/Documents` y falló. Un comando que va a correr Andrés lleva su `cd` con la ruta completa.
+
+2026-10-19 | vault desfasado al cortar versión, MintStash | `active-context` daba el arreglo de `/creators` como «en main sin publicar» cuando ya iba dentro de la v0.70.1. Cortar una versión no repasa las líneas «sin publicar» del vault, así que se quedan viejas sin que nada avise. Candidato a arreglo: que el skill `release` busque esas líneas y proponga actualizarlas.
