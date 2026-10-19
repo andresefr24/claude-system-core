@@ -777,3 +777,13 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-17 | prototipo sin medir, MintStash | Dos propuestas visuales se aplicaron distintas de lo enseñado: plegables de dos tercios a columna de 400 px (descuadre de 43 px al medir) y el correo de 560 a 732 px (una regla global de imagen pisaba el `max-width`). Avisado en los dos casos, pero el prototipo no se había hecho con las medidas reales.
 
 2026-10-19 | normativo sin leer, MintStash | Propuse los colores de los correos (bajadas en `#ef4444`, «el rojo de bajada de la app») sin leer `docs/ui-rules.md`, que la regla «nunca de memoria» nombra como normativo. Su regla 20 dice que aquí una bajada es buena noticia y el radar la pinta en teal; Andrés lo validó en rojo y salió de casualidad al revisar las reglas `[H]` del release. Un correo también es interfaz: los normativos de interfaz se leen antes de proponer cómo se ve.
+
+2026-10-19 | hueco de contexto, MintStash | Redacté los mensajes a creadores sobre una plantilla, sin leer las conversaciones que ya habían tenido con Andrés. Él notó el sabor a IA; hubo que pedir a Cowork la copia literal de correo, Instagram y Discord, y con ella cambió el enfoque entero (a todos se les había prometido lo mismo dos veces, y ya habían leído tres veces las frases de la plantilla).
+
+2026-10-19 | sin verificar contra la fuente, MintStash | El mensaje enviado a La Casa del Comandante le dice «pides tu enlace» y ya tenía código activo ligado a su cuenta. Lo vi al día siguiente, al comprobar en la base el de Mei. Un dato de un destinatario (si ya tiene cuenta, código, enlace) se mira en la base antes de redactar, no después de enviar.
+
+2026-10-19 | comentario por código, MintStash | Propuse repetir `seed-artist-list` sobre las listas de Mei porque su cabecera dice «idempotent: it updates the existing list». Al leer el código antes de correrlo, borraba todas las filas y las reinsertaba: se habrían perdido 4 ediciones a mano. La misma forma en cuatro scripts más. Parado a tiempo, pero la propuesta ya estaba hecha sobre el comentario.
+
+2026-10-19 | copia que no contempla un caso, MintStash | «Todos los meses» en el resumen del 25% de los correos y en dos textos de la página `/creators`, con un plan anual decidido desde el 25-09. Lo cazó Andrés al leer el borrador. Copié la frase de la página sin preguntarme si valía para los dos planes.
+
+2026-10-19 | vault desfasado, MintStash | El registro de `people.md` no tenía nada entre el 24-09 y el 16-10, con nueve respuestas de creadores en ese tramo (una propuesta de vídeo, dos sin contestar por nosotros, un «no»). Y una nota decía que el mensaje del 24-09 a La Casa le contaba TD-287, cosa que la copia literal desmiente. Salió solo al pedir las conversaciones enteras.
