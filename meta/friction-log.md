@@ -804,3 +804,7 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-19 | instrumento que no distingue, MintStash | Le di a Andrés «6 cartas nuevas» para las listas de artista de Mei comparando por `oracle_id`, y 2 eran láminas de Art Series (solo la ilustración, no cartas). No miré el `layout` de lo que contaba; lo cazó la sesión del script al construir el arreglo.
 
 2026-10-19 | dos sesiones en la misma carpeta, MintStash | Andrés pidió mezclar en `main` y no pude hacerlo desde aquí: la sesión del script, arrancada sin copia de trabajo propia, tenía cambios sin guardar en esa rama y en la misma carpeta, y el pre-push habría corrido la batería sobre ese árbol a medias. Hubo que pasarle la orden a ella. Una sesión que va a escribir código en un repo que otra sesión también toca va en su propia copia de trabajo.
+
+2026-10-19 | lectura parcial, MintStash | Le dije a Andrés que la función de prueba podía pisar precios en producción leyendo solo la línea del upsert, sin mirar quién la llamaba. Al leer lo desplegado entero, solo escribe cartas que no seguíamos, así que nunca pudo pisar.
+
+2026-10-19 | comando sin carpeta, MintStash | Le pasé `npm run deploy:trial` sin el `cd` al repo; lo lanzó desde `~/Documents` y falló. Un comando que va a correr Andrés lleva su `cd` con la ruta completa.
