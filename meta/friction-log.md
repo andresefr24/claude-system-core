@@ -810,3 +810,15 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-19 | comando sin carpeta, MintStash | Le pasé `npm run deploy:trial` sin el `cd` al repo; lo lanzó desde `~/Documents` y falló. Un comando que va a correr Andrés lleva su `cd` con la ruta completa.
 
 2026-10-19 | vault desfasado al cortar versión, MintStash | `active-context` daba el arreglo de `/creators` como «en main sin publicar» cuando ya iba dentro de la v0.70.1. Cortar una versión no repasa las líneas «sin publicar» del vault, así que se quedan viejas sin que nada avise. Candidato a arreglo: que el skill `release` busque esas líneas y proponga actualizarlas.
+
+2026-10-21 | commit ajeno arrastra cambios, MintStash | Dejé people.md y el outreach modificados sin commit en el vault; otra sesión (la del cobro) hizo commit de todo lo pendiente y mis apuntes de creadores entraron bajo «cobro: el paso 4, probado de punta a punta», ya pusheado. Con sesiones en paralelo sobre el mismo checkout, lo que no se commitea al momento acaba en el commit de otro.
+
+2026-10-21 | inferencia escrita como hecho, MintStash | En people.md escribí que el fallo de importación de LordDani con una carta de The List «encaja» con las 1.152 cartas de The List sin cruce con Cardmarket. Ese hueco es del precio (PR-007), no de la importación; no miré la causa. Lo cacé al cerrar, no al escribir.
+
+2026-10-20 | vault desfasado, MintStash | El «Dónde retomar» de la spec del cobro decía 11-10 y proponía como siguiente el pulido y el repaso, hechos el 12 y 13-10. Misma enfermedad que la del 19-10: cuando el trabajo avanza fuera de la sección que lo apunta, nada la repasa. Se cruzó contra el repaso a mano y el repo antes de proponer nada.
+
+2026-10-20 | re-explicación, MintStash | Pregunté «¿solo avisa o avisa y arregla?» para la revisión del plan contra Stripe y Andrés contestó sin entenderla («arreglar que?»). La primera versión hablaba de copias y testigos sin un caso concreto; la segunda, con la libreta, la nota perdida y Ana que pagó, se entendió a la primera.
+
+2026-10-20 | credencial sin comprobar, MintStash | Propuse `tcgvalut+75` como cuenta de prueba para pagar sin preguntar si Andrés tenía su contraseña; no la tenía. Comprobé en la base que estaba en gratis, pero no la parte que dependía de él.
+
+2026-10-20 | tarjeta de sesión que sobraba, MintStash | Andrés dijo «déjalo escrito para una sesión nueva» y aun así le saqué la tarjeta de «Nueva sesión / Hacerlo aquí»; eligió hacerlo aquí. La pregunta ya estaba contestada en su mensaje.
