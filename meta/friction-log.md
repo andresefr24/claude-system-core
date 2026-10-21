@@ -822,3 +822,11 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-20 | credencial sin comprobar, MintStash | Propuse `tcgvalut+75` como cuenta de prueba para pagar sin preguntar si Andrés tenía su contraseña; no la tenía. Comprobé en la base que estaba en gratis, pero no la parte que dependía de él.
 
 2026-10-20 | tarjeta de sesión que sobraba, MintStash | Andrés dijo «déjalo escrito para una sesión nueva» y aun así le saqué la tarjeta de «Nueva sesión / Hacerlo aquí»; eligió hacerlo aquí. La pregunta ya estaba contestada en su mensaje.
+
+2026-10-21 | hueco de contexto, MintStash | Recomendé quitar «Me apunto» de /pricing suponiendo que la página se abría el día del botón; Andrés corrigió que se abre unas semanas antes, para que la beta se entere. Ese plan no estaba en el vault, y lo di por hecho en vez de preguntar cuándo se abría.
+
+2026-10-21 | afirmación sin calcular, MintStash | Dije que a las cuentas por encima del plan gratis les siguen funcionando «dos avisos», resumiendo la decisión del 02-10; al calcularlo cuenta por cuenta salió uno (el segundo es solo de listas ajenas). Lo corregí antes de que Andrés aprobara el texto, pero lo afirmé sin la cuenta hecha.
+
+2026-10-21 | retry, MintStash | Pasé verify:full en verde, después añadí `npm run beta-notice` a package.json sin volver a pasarlo, y el pre-push lo frenó (env-file-flag). El gate lo cazó; el orden fue el malo: la batería va después del último cambio, no antes.
+
+2026-10-21 | override, MintStash | El modo automático bloqueó el borrado de cuatro cuentas de prueba por la API de administración; Andrés lo corrió desde su terminal con el comando que le di. Para borrar cuentas, darle el comando desde el principio.
