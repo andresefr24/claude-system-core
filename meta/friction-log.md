@@ -830,3 +830,11 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-21 | retry, MintStash | Pasé verify:full en verde, después añadí `npm run beta-notice` a package.json sin volver a pasarlo, y el pre-push lo frenó (env-file-flag). El gate lo cazó; el orden fue el malo: la batería va después del último cambio, no antes.
 
 2026-10-21 | override, MintStash | El modo automático bloqueó el borrado de cuatro cuentas de prueba por la API de administración; Andrés lo corrió desde su terminal con el comando que le di. Para borrar cuentas, darle el comando desde el principio.
+
+2026-10-22 | afirmación sin releer, MintStash | Dije que el día del botón serían «dos comandos seguidos» (beta + aviso), de memoria; la decisión dice que el mensaje a la beta sale semanas antes, al abrir /pricing. Lo corregí al turno siguiente, tras leer la decisión para otra pregunta.
+
+2026-10-22 | re-explicación, MintStash | Andrés pidió dos veces «for dummies, breve» (tras el turno del correo del día del botón y tras el despliegue del de cancelación): los reportes listaban comprobaciones, venenos y commits. Cuarta sesión con la misma queja; la regla de memoria existe y no basta tras un turno largo de construcción.
+
+2026-10-22 | hueco de contexto, MintStash | El encargo de Cowork daba por hecho que /profile se abría con una cuenta recién creada; pasa antes por el onboarding. Es la regla de la skill «comprobar que la interfaz ofrece el gesto», no aplicada a una cuenta nueva.
+
+2026-10-22 | retry, MintStash | Marqué un smoke-brief como validated: true antes de cerrar el arco y el pre-push del vault lo frenó (validado = archivar). Al deshacerlo, `sed -i '' '0,/x/s//y/'` (sintaxis GNU) no hizo nada en macOS sin dar error; lo vi en el grep siguiente.
