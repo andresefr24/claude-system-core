@@ -838,3 +838,5 @@ Tipos: retry · frio (arrancó sin contexto) · reexplicacion · override (routi
 2026-10-22 | hueco de contexto, MintStash | El encargo de Cowork daba por hecho que /profile se abría con una cuenta recién creada; pasa antes por el onboarding. Es la regla de la skill «comprobar que la interfaz ofrece el gesto», no aplicada a una cuenta nueva.
 
 2026-10-22 | retry, MintStash | Marqué un smoke-brief como validated: true antes de cerrar el arco y el pre-push del vault lo frenó (validado = archivar). Al deshacerlo, `sed -i '' '0,/x/s//y/'` (sintaxis GNU) no hizo nada en macOS sin dar error; lo vi en el grep siguiente.
+
+2026-10-23 | hueco de contexto, MintStash | Medí el reel de Mei sin abrir `reference-lo-que-trajo-el-reel-de-malditomana-2026-10-16`, que ya tenía el método (sesiones cortadas a 30 min, sin internos, fuente del primer `landing_viewed`) y la línea base. Primera consulta con `payload->>'referralCode'` (nombre del campo en TS) en vez de `ref`, vacía; y las 10 sesiones que reporté no son comparables con las 40 de malditomana. La apertura roza estado y decisiones, pero no busca si ya se midió antes algo parecido.
